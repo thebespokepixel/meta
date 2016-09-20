@@ -33,6 +33,7 @@
     "ava": "^0.16.0",
     "codeclimate-test-reporter": "^0.3.3",
     "documentation": "^4.0.0-beta10",
+    "greenkeeper-postpublish": "^1.0.1",
     "gulp": "github:gulpjs/gulp#4.0",
     "nyc": "^8.3.0",
     "snyk": "^1.19.1",
@@ -40,7 +41,12 @@
   },
   "xo": {
     "semicolon": false,
-    "esnext": true
+    "esnext": true,
+    "ignores": [
+      "index.js",
+      "lib/*",
+      "test/coverage/**"
+    ]
   },
   "dependencies": {
     "read-pkg-up": "^1.0.1"
