@@ -1,0 +1,53 @@
+{
+  "name": "@thebespokepixel/meta",
+  "version": "0.0.1",
+  "description": "Extract package metadata with consistent presentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "xo && snyk test && nyc ava",
+    "doc-serve": "documentation serve -p -w --name @thebespokepixel/meta src/**/*.js -c src/docs/documentation.yml",
+    "code-climate": "nyc report --reporter=text-lcov | codeclimate-test-reporter",
+    "coverage": "nyc ava && nyc report --reporter=lcov --report-dir test/coverage; open test/coverage/lcov-report/index.html",
+    "generate-test-fixtures": "scripts/generate-test-fixtures",
+    "postpublish": "greenkeeper-postpublish",
+    "clean": "gulp clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarkGriffiths/meta.git"
+  },
+  "keywords": [
+    "metadata",
+    "package",
+    "pkg",
+    "version"
+  ],
+  "author": "Mark Griffiths <mark@thebespokepixel.com> (http://thebespokepixel.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarkGriffiths/meta/issues"
+  },
+  "homepage": "https://github.com/MarkGriffiths/meta#readme",
+  "devDependencies": {
+    "@thebespokepixel/cordial": "^0.16.4",
+    "ava": "^0.16.0",
+    "codeclimate-test-reporter": "^0.3.3",
+    "documentation": "^4.0.0-beta10",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "nyc": "^8.3.0",
+    "snyk": "^1.19.1",
+    "xo": "^0.16.0"
+  },
+  "xo": {
+    "semicolon": false,
+    "esnext": true
+  },
+  "dependencies": {
+    "read-pkg-up": "^1.0.1"
+  },
+  "buildNumber": 2,
+  "engines": {
+    "node": ">=4.0 <7.0"
+  },
+  "jsnext:main": "lib/index-es.js"
+}
