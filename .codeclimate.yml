@@ -6,7 +6,7 @@ engines:
       languages:
       - javascript
   eslint:
-    enabled: false
+    enabled: true
     config:
       config: test/fixtures/config/.eslintrc
   fixme:
