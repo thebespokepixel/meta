@@ -9,16 +9,23 @@
 import readPkg from 'read-pkg-up'
 
 /**
- * D
+ * Creates the metadata collection function, starting at the path provided or
+ * the current working directory by default.
  * @function meta
  * @param  {String} cwd The directory to start searching for a package.json file.
  * @return {metadata}     The map of reduced package metadata.
+ * @example <caption>ES2015</caption>
+ * import meta from '@thebespokepixel/meta'
+ * const metadata = meta('..')
+ *
+ * @example <caption>CommonJS</caption>
+ * const metadata = require('@thebespokepixel/meta')('..')
  */
 export default function (cwd = '.') {
 	const pkg = readPkg.sync({cwd}).pkg
 
 	/**
-	 * Extract metadata for sharing inside the package.
+	 * Extract metadata for sharing inside a package.
 	 * @typedef {metadata}
 	 * @property {String} name          The package's name
 	 * @property {String} bin           The CLI binary we provide
@@ -26,13 +33,6 @@ export default function (cwd = '.') {
 	 * @property {String} license       The package license
 	 * @property {String} bugs          Our issues queue
 	 * @property {Function} version     Print the package version
-	 * @example <caption>Is this the caption?</caption>
-	 * import meta from '@thebespokepixel/meta'
-	 * const metadata = meta()
- 	 *
-	 *  1: Returns version number.
-	 *  2: Returns long version and package name.
-	 *  3: Returns v-prefixed version number.
 	 */
 	const metadata = {
 		get name() {

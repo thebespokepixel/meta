@@ -72,7 +72,9 @@
   </h3>
 
   
-    <p>Look up the file system hierarchy, starting from {cwd}, for a package file and return package metadata as a sanitised map.</p>
+    <p>Look up the file system hierarchy, starting from the current working
+directory or provided path for a package file and return specific package
+metadata as a sanitised map.</p>
 
   
 </section>
@@ -88,14 +90,15 @@
       meta
     </h3>
     
-      <a class='right bg-darken-1 rounded px1 quiet h5' href='https://github.com/MarkGriffiths/meta/blob/9c7ae0e601e2791d85bffc1ab2854d677e86e0ed/src/lib/index.js#L17-L80'>
+      <a class='right bg-darken-1 rounded px1 quiet h5' href='https://github.com/MarkGriffiths/meta/blob/afbfaf8f74fbf42cd0c180fbf30d59d118a5c5da/src/lib/index.js#L24-L80'>
       <span>src/lib/index.js</span>
       </a>
     
   </div>
   
 
-  <p>D</p>
+  <p>Creates the metadata collection function, starting at the path provided or
+the current working directory by default.</p>
 
   
   <div class='pre p1 bg-darken-1 mt0'>meta(cwd: [<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>](default &#x27;.&#x27;)): <a href="#metadata">metadata</a></div>
@@ -138,6 +141,18 @@
   
 
   
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+      
+      <p>ES2015</p>
+
+      <pre class='p1 overflow-auto rounded bg-darken-1'><span class="hljs-keyword">import</span> meta <span class="hljs-keyword">from</span> <span class="hljs-string">'@thebespokepixel/meta'</span>
+<span class="hljs-keyword">const</span> metadata = meta(<span class="hljs-string">'..'</span>)</pre>
+    
+      <p>CommonJS</p>
+
+      <pre class='p1 overflow-auto rounded bg-darken-1'><span class="hljs-keyword">const</span> metadata = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@thebespokepixel/meta'</span>)(<span class="hljs-string">'..'</span>)</pre>
+    
+  
 
   
 
@@ -157,14 +172,14 @@
       metadata
     </h3>
     
-      <a class='right bg-darken-1 rounded px1 quiet h5' href='https://github.com/MarkGriffiths/meta/blob/9c7ae0e601e2791d85bffc1ab2854d677e86e0ed/src/lib/index.js#L37-L77'>
+      <a class='right bg-darken-1 rounded px1 quiet h5' href='https://github.com/MarkGriffiths/meta/blob/afbfaf8f74fbf42cd0c180fbf30d59d118a5c5da/src/lib/index.js#L37-L77'>
       <span>src/lib/index.js</span>
       </a>
     
   </div>
   
 
-  <p>Extract metadata for sharing inside the package.</p>
+  <p>Extract metadata for sharing inside a package.</p>
 
   
   
@@ -230,18 +245,6 @@
 
   
 
-  
-    <div class='py1 quiet mt1 prose-big'>Example</div>
-      
-      <p>Is this the caption?</p>
-
-      <pre class='p1 overflow-auto rounded bg-darken-1'><span class="hljs-keyword">import</span> meta <span class="hljs-keyword">from</span> <span class="hljs-string">'@thebespokepixel/meta'</span>
-<span class="hljs-keyword">const</span> metadata = meta()
-
- <span class="hljs-number">1</span>: Returns version number.
- <span class="hljs-number">2</span>: Returns long version and package name.
- <span class="hljs-number">3</span>: Returns v-prefixed version number.</pre>
-    
   
 
   

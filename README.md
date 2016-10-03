@@ -14,9 +14,15 @@
 > [![Inline docs][inch-badge]][inch]
 > [![ES support][es-badge]][es]
 
-[API Docs][1]
+### Installation
 
-[1]: 
+```js
+npm i -S @thebespokepixel/meta
+```
+
+###[API Documentation][1]
+
+[1]: https://markgriffiths.github.io/meta/
 
 [gitter-badge]: https://img.shields.io/gitter/room/MarkGriffiths/help.svg?style=flat
 [project-badge]: http://img.shields.io/badge/status-beta-blue.svg?style=flat

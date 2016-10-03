@@ -58,7 +58,7 @@
   "dependencies": {
     "read-pkg-up": "^1.0.1"
   },
-  "buildNumber": 42,
+  "buildNumber": 48,
   "engines": {
     "node": ">=4.0 <7.0"
   },
