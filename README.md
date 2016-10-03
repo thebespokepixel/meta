@@ -1,17 +1,22 @@
 # @thebespokepixel/meta
+
 > Extract package metadata with consistent presentation.
 >
->[![Build Status][build-badge]][travis]
-[![Dependency Status][david-badge]][david]
-[![Code Climate][code-climate-badge]][code-climate]
-[![Known Vulnerabilities][snyk-badge]][snyk]
-[![npm Status][npm-badge]][npm]
-[![Chat on Gitter][gitter-badge]][gitter]  
-![Project status][project-badge]
-[![devDependency Status][david-dev-badge]][david-dev]
-[![Coverage][coverage-badge]][coverage]
-[![Inline docs][inch-badge]][inch]
-[![ES support][es-badge]][es]
+> [![Build Status][build-badge]][travis]
+> [![Dependency Status][david-badge]][david]
+> [![Code Climate][code-climate-badge]][code-climate]
+> [![Known Vulnerabilities][snyk-badge]][snyk]
+> [![npm Status][npm-badge]][npm]
+> [![Chat on Gitter][gitter-badge]][gitter]  
+> ![Project status][project-badge]
+> [![devDependency Status][david-dev-badge]][david-dev]
+> [![Coverage][coverage-badge]][coverage]
+> [![Inline docs][inch-badge]][inch]
+> [![ES support][es-badge]][es]
+
+[API Docs][1]
+
+[1]: 
 
 [gitter-badge]: https://img.shields.io/gitter/room/MarkGriffiths/help.svg?style=flat
 [project-badge]: http://img.shields.io/badge/status-beta-blue.svg?style=flat
@@ -30,9 +35,10 @@
 [david-dev]: https://david-dm.org/MarkGriffiths/meta/master#info=devDependencies
 [npm]: https://www.npmjs.com/package/@thebespokepixel/meta
 [snyk]: https://snyk.io/test/github/markgriffiths/meta
-[code-climate]:https://codeclimate.com/github/MarkGriffiths/meta
-[coverage]:https://codeclimate.com/coverage/github/MarkGriffiths/meta
+[code-climate]: https://codeclimate.com/github/MarkGriffiths/meta
+[coverage]: https://codeclimate.com/coverage/github/MarkGriffiths/meta
 [xo]: https://github.com/sindresorhus/xo
 [inch]: http://inch-ci.org/github/MarkGriffiths/meta
 [es]: https://github.com/rollup/rollup/wiki/jsnext:main
 [gitter]: https://gitter.im/MarkGriffiths/help?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+

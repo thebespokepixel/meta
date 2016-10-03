@@ -1,0 +1,45 @@
+.documentation {
+  font-family: 'TypoPRO Fira Sans', sans-serif;
+  color: #4a4a4a;
+  line-height: 1.5;
+  background: #e0e0e0;
+}
+
+.sidebar {
+	background:  url(../images/logo-vertical.svg) left 4px bottom 4px no-repeat, linear-gradient(130deg, #26261B, #333324);
+	color: #BFBF86;
+	box-shadow: 2px 2px 6px #999;
+}
+
+a {
+  text-decoration: none;
+}
+
+.documentation a[href]:hover {
+  text-decoration: underline;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.sidebar a {
+	color: #BFBF86;
+}
+
+.sidebar a:hover {
+	color: #FFFFB3;
+}
+
+.pre, pre, code, .code {
+  font-family: 'TypoPRO Hack', monospace;
+  font-size: 14px;
+}
+
+.minishadow {
+  box-shadow: 2px 2px 6px #999;
+}
+
+.quiet {
+  opacity: 0.7;
+}

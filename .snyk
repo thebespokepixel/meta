@@ -4,7 +4,16 @@ ignore:
     - glob-watcher > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
         reason: None given
         expires: '2016-10-20T16:35:17.020Z'
+      documentation-theme-bespoke > remark > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        reason: None given
+        expires: '2016-10-22T16:47:22.666Z'
     - gulp > glob-watcher > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
         reason: None given
         expires: '2016-10-20T16:35:17.021Z'
+      documentation-theme-bespoke > documentation > remark > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        reason: None given
+        expires: '2016-10-22T16:47:22.666Z'
+    - documentation-theme-bespoke > documentation > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        reason: None given
+        expires: '2016-10-22T16:47:22.667Z'
 patch: {}

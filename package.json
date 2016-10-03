@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "xo && snyk test && nyc ava",
-    "doc-serve": "documentation serve -p -w --name @thebespokepixel/meta src/**/*.js -c src/docs/documentation.yml",
+    "doc-serve": "documentation serve --watch --theme node_modules/documentation-theme-bespoke --document-exported --github --config src/docs/documentation.yml --name $npm_package_name  --project-version $npm_package_version src/lib/index.js",
+    "doc-build": "documentation build --format html --output docs --theme node_modules/documentation-theme-bespoke --document-exported --github --config src/docs/documentation.yml --name $npm_package_name  --project-version $npm_package_version src/lib/index.js",
     "code-climate": "nyc report --reporter=text-lcov | codeclimate-test-reporter",
     "coverage": "nyc ava && nyc report --reporter=lcov --report-dir test/coverage; open test/coverage/lcov-report/index.html",
     "generate-test-fixtures": "scripts/generate-test-fixtures",
@@ -23,6 +24,10 @@
     "version"
   ],
   "author": "Mark Griffiths <mark@thebespokepixel.com> (http://thebespokepixel.com/)",
+  "copyright": {
+    "year": "2016",
+    "owner": "Mark Griffiths @ The Bespoke Pixel"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/MarkGriffiths/meta/issues"
@@ -33,6 +38,7 @@
     "ava": "^0.16.0",
     "codeclimate-test-reporter": "^0.3.3",
     "documentation": "^4.0.0-beta10",
+    "documentation-theme-bespoke": "file:../../Documentation/documentation-theme-bespoke",
     "greenkeeper-postpublish": "^1.0.1",
     "gulp": "github:gulpjs/gulp#4.0",
     "nyc": "^8.3.0",
@@ -44,14 +50,15 @@
     "esnext": true,
     "ignores": [
       "index.js",
-      "lib/*",
+      "lib/**",
+      "docs/**",
       "test/coverage/**"
     ]
   },
   "dependencies": {
     "read-pkg-up": "^1.0.1"
   },
-  "buildNumber": 2,
+  "buildNumber": 42,
   "engines": {
     "node": ">=4.0 <7.0"
   },

@@ -2,44 +2,61 @@
  │ @thebespokepixel/meta │
  ╰───────────────────────┴──────────────────────────────────────────────────────*/
 /**
- * Look up the file system hierarchy, starting from {cwd}, for a package file
- * and return package metadata as a sanitised map.
- * @alias thebespokepixel/meta
+ * @module @thebespokepixel/meta
+ * @private
  */
 
 import readPkg from 'read-pkg-up'
 
 /**
- * Default function.
- * @alias  default
+ * D
+ * @function meta
  * @param  {String} cwd The directory to start searching for a package.json file.
- * @return {Object}     A sanitised map of package metadata.
+ * @return {metadata}     The map of reduced package metadata.
  */
-export default function (cwd = '..') {
-	const pkg = readPkg.sync({cwd})
-
-	const bin = pkg.bin ? Object.keys(pkg.bin)[0] : 'none'
+export default function (cwd = '.') {
+	const pkg = readPkg.sync({cwd}).pkg
 
 	/**
 	 * Extract metadata for sharing inside the package.
-	 * @type {Object}
+	 * @typedef {metadata}
 	 * @property {String} name          The package's name
 	 * @property {String} bin           The CLI binary we provide
 	 * @property {String} description   The description from package.json
 	 * @property {String} license       The package license
 	 * @property {String} bugs          Our issues queue
-	 * @property {Function} version     Print the pacakge version, arg value:
-	 *                                  1. Version number
-	 *                                  2. Long version
-	 *                                  3. v-prefixed version number.
+	 * @property {Function} version     Print the package version
+	 * @example <caption>Is this the caption?</caption>
+	 * import meta from '@thebespokepixel/meta'
+	 * const metadata = meta()
+ 	 *
+	 *  1: Returns version number.
+	 *  2: Returns long version and package name.
+	 *  3: Returns v-prefixed version number.
 	 */
 	const metadata = {
-		name: pkg.name,
-		bin,
-		description: pkg.description,
-		copyright: `©${pkg.copyright.year} ${pkg.copyright.owner}`,
-		license: pkg.license,
-		bugs: pkg.bugs.url,
+		get name() {
+			return pkg.name
+		},
+		get description() {
+			return pkg.description ? pkg.description : 'No description'
+		},
+		get copyright() {
+			if (pkg.copyright && pkg.copyright.year) {
+				return `©${pkg.copyright.year} ${pkg.copyright.owner}`
+			}
+			return pkg.copyright ? pkg.copyright :
+				`©${new Date().getFullYear()} ${pkg.author.name}`
+		},
+		get license() {
+			return pkg.license
+		},
+		get bugs() {
+			return pkg.bugs.url
+		},
+		get bin() {
+			return pkg.bin ? Object.keys(pkg.bin)[0] : 'none'
+		},
 		version: (long_ = 1) => {
 			const version = (function () {
 				if (pkg.buildNumber > 0) {

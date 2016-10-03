@@ -1,3 +1,5 @@
 toc:
-  - thebespokepixel/meta
+  - name: "API"
+    description: |
+      Look up the file system hierarchy, starting from {cwd}, for a package file and return package metadata as a sanitised map.
 
