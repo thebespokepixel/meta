@@ -38,7 +38,7 @@
     "ava": "^0.16.0",
     "codeclimate-test-reporter": "^0.3.3",
     "documentation": "^4.0.0-beta10",
-    "documentation-theme-bespoke": "file:../../Documentation/documentation-theme-bespoke",
+    "documentation-theme-bespoke": "^0.1.0",
     "greenkeeper-postpublish": "^1.0.1",
     "gulp": "github:gulpjs/gulp#4.0",
     "nyc": "^8.3.0",
