@@ -9,6 +9,7 @@
     "doc-build": "documentation build --format html --output docs --theme node_modules/documentation-theme-bespoke --document-exported --github --config src/docs/documentation.yml --name $npm_package_name  --project-version $npm_package_version src/lib/index.js",
     "code-climate": "nyc report --reporter=text-lcov | codeclimate-test-reporter",
     "coverage": "nyc ava && nyc report --reporter=lcov --report-dir test/coverage; open test/coverage/lcov-report/index.html",
+    "prepublish": "npm run doc-build",
     "postpublish": "greenkeeper-postpublish",
     "clean": "gulp clean"
   },
