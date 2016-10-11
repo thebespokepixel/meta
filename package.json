@@ -55,7 +55,7 @@
     ]
   },
   "dependencies": {
-    "read-pkg-up": "^1.0.1"
+    "read-pkg-up": "^2.0.0"
   },
   "buildNumber": 0,
   "engines": {
