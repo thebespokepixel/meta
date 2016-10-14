@@ -1,7 +1,11 @@
 toc:
+  - name: "Installation"
+    description: |
+      ```sh
+        npm install --save @thebespokepixel/meta
+      ```
   - name: "API"
     description: |
       Look up the file system hierarchy, starting from the current working
       directory or provided path for a package file and return specific package
       metadata as a sanitised map.
-

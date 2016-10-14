@@ -11,8 +11,8 @@
 </head>
 <body class='m0 documentation'>
   <div class='flex'>
-    <div class='flex-column fixed top-0 bottom-0 px3 xs-hide overflow-auto max-height-100 sidebar'>
-      <h3 class='mb0 no-anchor'>@thebespokepixel/meta</h3>
+    <div class='flex-column fixed top-0 bottom-0 px2 pt2 xs-hide overflow-auto max-height-100 sidebar'>
+      <h3 class='m0 no-anchor'>@thebespokepixel/meta</h3>
       <div class='mb1'><code>v0.1.2</code></div>
       <input
         placeholder='Filter'
@@ -21,6 +21,16 @@
         type='text' />
       <div id='toc'>
         <ul class='list-reset h5 py1-ul'>
+          
+            
+            <li><a
+              href='#installation'
+              class="h5 bold black caps">
+              Installation
+              
+            </a>
+            
+            </li>
           
             
             <li><a
@@ -42,31 +52,37 @@
             
             </li>
           
-            
-            <li><a
-              href='#metadata'
-              class="">
-              metadata
-              
-            </a>
-            
-            </li>
-          
         </ul>
       </div>
       <div class='mt1 h6 quiet'>
         <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
       </div>
     </div>
-    <div class='flex-column px3 xs-hide'>
+    <div class='flex-column px2 xs-hide'>
       <h3 class='mb0 no-anchor'>@thebespokepixel/meta</h3>
     </div>
-    <div class='flex-auto px2'>
+    <div class='flex-auto px2 pt1'>
       
         
-          <div class='keyline-top-not py2'><section class='pb2 clearfix'>
+          <div class='keyline-top-not py1'><section class='py0 px2 clearfix'>
 
-  <h3 id='API' class='mt0'>
+  <h3 id='Installation' class='m0'>
+    Installation
+  </h3>
+
+  
+    <pre><code>  npm install --save @thebespokepixel/meta
+</code></pre>
+
+  
+</section>
+</div>
+        
+      
+        
+          <div class='keyline-top-not py1'><section class='py0 px2 clearfix'>
+
+  <h3 id='API' class='m0'>
     API
   </h3>
 
@@ -86,12 +102,10 @@ metadata as a sanitised map.</p>
   
   <div class='clearfix'>
     <h3 class='left m0 panel-title' id='meta'>
-      meta  <span>→ <a href="#metadata">metadata</a></span>
+      meta  <span>→ metadata</span>
     </h3>
     
-      <a class='right bg-darken-1 rounded px1 quiet h5' href='https://github.com/MarkGriffiths/meta/blob/1f1f09acf9ddee7fdd6c675d53b93ca5259c3243/src/lib/index.js#L24-L80'>
-      <span>src/lib/index.js</span>
-      </a>
+      <a class='btn pl3 right rounded github' href='https://github.com/MarkGriffiths/meta/blob/47b4fb89c8ebab5bf5bc802c682c4baece048195/src/lib/index.js#L24-L89'>src/lib/index.js</a>
     
   </div>
   
@@ -100,7 +114,7 @@ metadata as a sanitised map.</p>
 the current working directory by default.</p>
 
   
-  <div class='pre p1 bg-darken-1 mt0 signature'>meta(cwd: [<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>](default &#x27;.&#x27;)) → <a href="#metadata">metadata</a></div>
+  <div class='pre p1 bg-darken-1 mt0 signature'>meta(cwd: [<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>](default &#x27;.&#x27;)) → metadata</div>
   
   
 
@@ -130,7 +144,7 @@ the current working directory by default.</p>
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="#metadata">metadata</a></code>:
+      <code>metadata</code>:
         The map of reduced package metadata.
 
       
@@ -151,99 +165,6 @@ the current working directory by default.</p>
 
       <pre class='p1 overflow-auto rounded bg-darken-1'><span class="hljs-keyword">const</span> metadata = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@thebespokepixel/meta'</span>)(<span class="hljs-string">'..'</span>)</pre>
     
-  
-
-  
-
-  
-
-  
-</section>
-
-        
-      
-        
-          <section class='py2 px3 mb2 clearfix bg-white rounded minishadow'>
-
-  
-  <div class='clearfix'>
-    <h3 class='left m0 panel-title' id='metadata'>
-      metadata  
-    </h3>
-    
-      <a class='right bg-darken-1 rounded px1 quiet h5' href='https://github.com/MarkGriffiths/meta/blob/1f1f09acf9ddee7fdd6c675d53b93ca5259c3243/src/lib/index.js#L37-L77'>
-      <span>src/lib/index.js</span>
-      </a>
-    
-  </div>
-  
-
-  <p>Extract metadata for sharing inside a package.</p>
-
-  
-  
-
-  
-  
-  
-  
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Properties</div>
-    <div>
-      
-        <div class='space-bottom0'>
-          <span class='code bold'>name</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
-          : The package&#x27;s name
-
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <span class='code bold'>bin</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
-          : The CLI binary we provide
-
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <span class='code bold'>description</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
-          : The description from package.json
-
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <span class='code bold'>license</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
-          : The package license
-
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <span class='code bold'>bugs</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
-          : Our issues queue
-
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <span class='code bold'>version</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
-          : Print the package version
-
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-
   
 
   

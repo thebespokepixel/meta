@@ -110,14 +110,14 @@ a:hover {
   filter: alpha(opacity=70);
 }
 .sidebar {
-  background: url("../images/logo-vertical.svg") left 4px bottom 4px no-repeat, -webkit-linear-gradient(320deg, #26261b, #444430);
-  background: url("../images/logo-vertical.svg") left 4px bottom 4px no-repeat, -moz-linear-gradient(320deg, #26261b, #444430);
-  background: url("../images/logo-vertical.svg") left 4px bottom 4px no-repeat, -o-linear-gradient(320deg, #26261b, #444430);
-  background: url("../images/logo-vertical.svg") left 4px bottom 4px no-repeat, -ms-linear-gradient(320deg, #26261b, #444430);
-  background: url("../images/logo-vertical.svg") left 4px bottom 4px no-repeat, linear-gradient(130deg, #26261b, #444430);
+  background: url("../images/logo-vertical.svg") right 4px bottom 4px no-repeat, -webkit-linear-gradient(320deg, #26261b, #444430);
+  background: url("../images/logo-vertical.svg") right 4px bottom 4px no-repeat, -moz-linear-gradient(320deg, #26261b, #444430);
+  background: url("../images/logo-vertical.svg") right 4px bottom 4px no-repeat, -o-linear-gradient(320deg, #26261b, #444430);
+  background: url("../images/logo-vertical.svg") right 4px bottom 4px no-repeat, -ms-linear-gradient(320deg, #26261b, #444430);
+  background: url("../images/logo-vertical.svg") right 4px bottom 4px no-repeat, linear-gradient(130deg, #26261b, #444430);
   color: #bfbf86;
-  -webkit-box-shadow: 0px 2px 12px #808059;
-  box-shadow: 0px 2px 12px #808059;
+  -webkit-box-shadow: 0px 2px 12px rgba(47,51,36,0.4);
+  box-shadow: 0px 2px 12px rgba(47,51,36,0.4);
 }
 .sidebar a {
   color: #bfbf86;
@@ -127,9 +127,9 @@ a:hover {
 }
 .documentation {
   font-family: 'TypoPRO Fira Sans', sans-serif;
-  color: #4a4a4a;
+  color: #181a14;
   line-height: 1.5;
-  background: #e0e0e0;
+  background: #e3e6da;
 }
 .documentation a[href]:hover {
   text-decoration: underline;
@@ -142,7 +142,8 @@ code,
   font-size: 14px;
 }
 .panel-title {
-  font-size: 26px;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
 }
 .panel-title span {
   color: rgba(65,77,31,0.3);
@@ -151,10 +152,32 @@ code,
   color: rgba(65,77,31,0.3);
 }
 .minishadow {
-  -webkit-box-shadow: 0px 2px 6px #808059;
-  box-shadow: 0px 2px 6px #808059;
+  -webkit-box-shadow: 0px 2px 6px rgba(47,51,36,0.4);
+  box-shadow: 0px 2px 6px rgba(47,51,36,0.4);
 }
 .signature {
-  -webkit-box-shadow: inset 0px 1px 4px #808059;
-  box-shadow: inset 0px 1px 4px #808059;
+  -webkit-box-shadow: inset 0px 1px 4px rgba(47,51,36,0.4);
+  box-shadow: inset 0px 1px 4px rgba(47,51,36,0.4);
+}
+a.github {
+  background: url("../images/github.svg") left 8px center no-repeat #494d3d;
+  -webkit-background-size: 1rem;
+  -moz-background-size: 1rem;
+  background-size: 1rem;
+  font-weight: 200;
+  color: #dae6b8;
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -ms-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+a.github[href]:hover {
+  text-decoration: none;
+  opacity: 0.6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
 }
