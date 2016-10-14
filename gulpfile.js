@@ -1,20 +1,14 @@
-/*
- * Client Gulp Template Tasks
- * (Work in progress)
- */
- /* eslint import/no-extraneous-dependencies: 0 */
-
 const gulp = require('gulp')
 const cordial = require('@thebespokepixel/cordial')()
 
 // transpilation/formatting
 gulp.task('bundle', cordial.macro({
-	source: 'src/lib/index.js'
+	source: 'src/index.js'
 }).bundle())
 
 gulp.task('master', cordial.macro({
 	master: true,
-	source: 'src/lib/index.js'
+	source: 'src/index.js'
 }).bundle())
 
 // Clean
@@ -33,7 +27,7 @@ gulp.task('xo', cordial.test().xo(['src/lib/*.js']))
 gulp.task('test', gulp.parallel('xo', 'ava'))
 
 // Hooks
-gulp.task('start-release', gulp.series('reset', 'clean', 'docs', 'master'))
+gulp.task('start-release', gulp.series('reset', 'clean', gulp.parallel('docs', 'master')))
 
 // Default
-gulp.task('default', gulp.series('bump', 'clean', 'docs', 'bundle'))
+gulp.task('default', gulp.series('bump', 'clean', gulp.parallel('docs', 'bundle')))

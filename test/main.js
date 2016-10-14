@@ -1,6 +1,6 @@
 import test from 'ava'
 
-import pkg from '../package.json'
+import pkg from '../package'
 import meta from '..'
 
 const myMeta = meta()

@@ -1,6 +1,6 @@
 /* ──────────────────────╮
  │ @thebespokepixel/meta │
- ╰───────────────────────┴──────────────────────────────────────────────────────*/
+ ╰───────────────────────┴───────────────────────────────────────────────────── */
 /**
  * @module @thebespokepixel/meta
  * @private
@@ -26,13 +26,12 @@ export default function (cwd = '.') {
 
 	/**
 	 * Extract metadata for sharing inside a package.
-	 * @typedef {metadata}
+	 * @const {metadata}
 	 * @property {String} name          The package's name
 	 * @property {String} bin           The CLI binary we provide
 	 * @property {String} description   The description from package.json
 	 * @property {String} license       The package license
 	 * @property {String} bugs          Our issues queue
-	 * @property {Function} version     Print the package version
 	 */
 	const metadata = {
 		get name() {
@@ -57,7 +56,17 @@ export default function (cwd = '.') {
 		get bin() {
 			return pkg.bin ? Object.keys(pkg.bin)[0] : 'none'
 		},
-		version: (long_ = 1) => {
+		/**
+		 * Print a package version string.
+		 * @param  {Number} style The version string format wanted:
+		 * ```
+		 * 1: Simple number format: 0.1.2
+		 * 2: Long version with name: @thebespokepixel/meta v0.1.2
+		 * 3: v-prefixed version number: v0.1.2
+		 * ```
+		 * @return {String} The version string.
+		 */
+		version: (style = 1) => {
 			const version = (function () {
 				if (pkg.buildNumber > 0) {
 					return `${pkg.version}-Δ${pkg.buildNumber}`
@@ -65,7 +74,7 @@ export default function (cwd = '.') {
 				return `${pkg.version}`
 			})()
 
-			switch (long_) {
+			switch (style) {
 				case 3:
 					return `v${version}`
 				case 2:
