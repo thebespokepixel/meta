@@ -36,4 +36,4 @@ gulp.task('test', gulp.parallel('xo', 'ava'))
 gulp.task('start-release', gulp.series('reset', 'clean', gulp.parallel('docs', 'master')))
 
 // Default
-gulp.task('default', gulp.series('reset', 'clean', gulp.parallel('docs', 'bundle')))
+gulp.task('default', gulp.series('bump', 'clean', gulp.parallel('docs', 'bundle')))

@@ -2,7 +2,7 @@
 
 // add anchor links to headers
 anchors.options.placement = 'left'
-anchors.add('h3')
+anchors.add('h3').remove('.no-anchor')
 
 // Filter UI
 var tocElements = document.getElementById('toc')

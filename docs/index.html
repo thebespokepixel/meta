@@ -52,6 +52,33 @@
             
             </li>
           
+            
+            <li><a
+              href='#metadata'
+              class=" toggle-sibling">
+              metadata
+              <span class='icon'>▸</span>
+            </a>
+            
+            <div class='toggle-target display-none'>
+              
+              <ul class='list-reset py1-ul pl1'>
+                <li class='h5'><span>Static members</span></li>
+                
+                  <li><a
+                    href='#metadata.version'
+                    class='regular pre-open'>
+                    .version
+                  </a></li>
+                
+                </ul>
+              
+              
+              
+            </div>
+            
+            </li>
+          
         </ul>
       </div>
       <div class='mt1 h6 quiet'>
@@ -102,10 +129,10 @@ metadata as a sanitised map.</p>
   
   <div class='clearfix'>
     <h3 class='left m0 panel-title' id='meta'>
-      meta  <span>→ metadata</span>
+      meta  <span>→ <a href="#metadata">metadata</a></span>
     </h3>
     
-      <a class='btn pl3 right rounded github' href='https://github.com/MarkGriffiths/meta/blob/47b4fb89c8ebab5bf5bc802c682c4baece048195/src/lib/index.js#L24-L89'>src/lib/index.js</a>
+      <a class='pl3 pr1 right rounded github' href='https://github.com/MarkGriffiths/meta/blob/c36a77db3d020be6db68b01b221bcfcf497d4da2/src/lib/index.js#L24-L89'>src/lib/index.js</a>
     
   </div>
   
@@ -114,7 +141,7 @@ metadata as a sanitised map.</p>
 the current working directory by default.</p>
 
   
-  <div class='pre p1 bg-darken-1 mt0 signature'>meta(cwd: [<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>](default &#x27;.&#x27;)) → metadata</div>
+  <div class='pre p1 bg-darken-1 mt0 signature'>meta(cwd: [<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>](default &#x27;.&#x27;)) → <a href="#metadata">metadata</a></div>
   
   
 
@@ -144,7 +171,7 @@ the current working directory by default.</p>
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>metadata</code>:
+      <code><a href="#metadata">metadata</a></code>:
         The map of reduced package metadata.
 
       
@@ -166,6 +193,166 @@ the current working directory by default.</p>
       <pre class='p1 overflow-auto rounded bg-darken-1'><span class="hljs-keyword">const</span> metadata = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@thebespokepixel/meta'</span>)(<span class="hljs-string">'..'</span>)</pre>
     
   
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='py2 px3 mb2 clearfix bg-white rounded minishadow'>
+
+  
+  <div class='clearfix'>
+    <h3 class='left m0 panel-title' id='metadata'>
+      metadata  
+    </h3>
+    
+      <a class='pl3 pr1 right rounded github' href='https://github.com/MarkGriffiths/meta/blob/c36a77db3d020be6db68b01b221bcfcf497d4da2/src/lib/index.js#L36-L86'>src/lib/index.js</a>
+    
+  </div>
+  
+
+  <p>Extract metadata for sharing inside a package.</p>
+
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>name</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : The package&#x27;s name
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>bin</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : The CLI binary we provide
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>description</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : The description from package.json
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>license</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : The package license
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>bugs</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : Our issues queue
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='metadata.version'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>version(style)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='py2 px3 mb2 clearfix bg-white rounded minishadow'>
+
+  
+
+  <p>Print a package version string.</p>
+
+  
+  <div class='pre p1 bg-darken-1 mt0 signature'>version(style: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>) → <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>style</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code> The version string format wanted:
+<pre><code>1: Simple number format: 0.1.2
+2: Long version with name: @thebespokepixel/meta v0.1.2
+3: v-prefixed version number: v0.1.2
+</code></pre>
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
+        The version string.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
 
   
 
