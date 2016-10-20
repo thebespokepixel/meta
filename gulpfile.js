@@ -36,5 +36,5 @@ gulp.task('start-release', gulp.series('reset', 'clean', 'master'))
 gulp.task('post-flow-release-start', gulp.series('start-release', 'version-release', 'docs', 'readme', 'commit'))
 
 // Default
-gulp.task('default', gulp.series('bump', 'clean', gulp.parallel('docs', 'bundle'), 'readme'))
+gulp.task('default', gulp.series('bump', 'clean', gulp.parallel('docs', 'bundle', 'readme')))
 
