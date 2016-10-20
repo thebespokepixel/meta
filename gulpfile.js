@@ -23,7 +23,7 @@ gulp.task('docs', cordial.shell({
 
 // ReadMe
 gulp.task('readme', cordial.shell({
-	source: 'compile-readme -u src/docs/example.js src/docs/readme.md > readme.md'
+	source: 'npm run readme'
 }).job())
 
 // Tests
