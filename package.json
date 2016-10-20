@@ -1,6 +1,6 @@
 {
   "name": "@thebespokepixel/meta",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Extract package metadata with consistent presentation",
   "main": "index.js",
   "scripts": {
@@ -112,7 +112,7 @@
       ]
     ]
   },
-  "buildNumber": 0,
+  "buildNumber": 1,
   "engines": {
     "node": ">=4.0 <8.0"
   },
