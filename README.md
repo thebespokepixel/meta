@@ -1,57 +1,45 @@
 # @thebespokepixel/meta
 
-> Extract package metadata with consistent presentation.
->
-> [![Build Status][build-badge]][travis]
-> [![Dependency Status][david-badge]][david]
-> [![Code Climate][code-climate-badge]][code-climate]
-> [![Known Vulnerabilities][snyk-badge]][snyk]
-> [![npm Status][npm-badge]][npm]
-> [![Chat on Gitter][gitter-badge]][gitter]  
-> ![Project status][project-badge]
-> [![devDependency Status][david-dev-badge]][david-dev]
-> [![Coverage][coverage-badge]][coverage]
-> [![Inline docs][inch-badge]][inch]
-> [![ES support][es-badge]][es]
+> Automatically render project badges into readme and documentation files.
 
-### Installation
+##### Status
 
-```js
-npm i -S @thebespokepixel/meta
+![Status](https://img.shields.io/badge/status-beta-blue.svg?style=flat) [![npm](https://img.shields.io/npm/v/@thebespokepixel/meta.svg?style=flat&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU%2BbnBtPC90aXRsZT48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGZpbGwtb3BhY2l0eT0iLjMiIGZpbGw9IiMwMDAiIHg9IjIiIHk9IjExIiB3aWR0aD0iMTAiIGhlaWdodD0iMiIgcng9IjEiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMiAyaDEwdjEwSDJ6Ii8%2BPHBhdGggZmlsbD0iI0MxMjEyNyIgZD0iTTMgMTFoNFY1aDJ2NmgyVjNIM3oiLz48L2c%2BPC9zdmc%2B)](https://www.npmjs.com/package/@thebespokepixel/meta "npm") [![Travis](https://img.shields.io/travis/MarkGriffiths/meta.svg?branch=master&style=flat)](https://travis-ci.org/MarkGriffiths/meta "Travis") [![David](https://img.shields.io/david/MarkGriffiths/meta.svg?branch=master&style=flat)](https://david-dm.org/MarkGriffiths/meta/master "David")  
+ [![Code-climate](https://codeclimate.com/github/MarkGriffiths/meta/badges/gpa.svg?style=flat)](https://codeclimate.com/github/MarkGriffiths/meta "Code-climate") [![Coverage](https://codeclimate.com/github/MarkGriffiths/meta/badges/coverage.svg?style=flat)](https://codeclimate.com/github/MarkGriffiths/meta/coverage "Coverage") [![Snyk](https://snyk.io/test/github/MarkGriffiths/meta/badge.svg?style=flat)](https://snyk.io/test/github/MarkGriffiths/meta "Snyk")   
+
+##### Developer
+
+[![David-developer](https://img.shields.io/david/dev/MarkGriffiths/meta.svg?branch=master&style=flat)](https://david-dm.org/MarkGriffiths/meta/master#info=devDependencies "David-developer") [![Rollup](https://img.shields.io/badge/es2015-jsnext%3Amain_%E2%9C%94-64CA39.svg?style=flat&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDE0IDE0Ij4KICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgPHBhdGggZmlsbD0iI0ZGMzMzMyIgZD0iTTEwLjkwNDI4MjQsMy4wMDkxMDY4MyBDMTEuMjM4NzA1NSwzLjU4MjgzNzEzIDExLjQyODU3MTQsNC4yNDQ4MzM2MyAxMS40Mjg1NzE0LDQuOTUwOTYzMjIgQzExLjQyODU3MTQsNi40MTc4NjM0IDEwLjYwODY5NTcsNy42OTU2MjE3MiA5LjM5MTgyNzM5LDguMzc2NTMyNCBDOS4zMDU1MjQ2OCw4LjQyNDg2ODY1IDkuMjczMTYxMTYsOC41MzIwNDkwNCA5LjMxODQ3MDA5LDguNjE4MjEzNjYgTDExLjQyODU3MTQsMTMgTDUuMjU4NjgyODEsMTMgTDIuMzM5Nzc3MjMsMTMgQzIuMTUyMTIzNDUsMTMgMiwxMi44NDgyNzU3IDIsMTIuNjUzODA0OCBMMiwxLjM0NjE5NTIyIEMyLDEuMTU0OTk2ODggMi4xNDgzMTU0MywxIDIuMzM5Nzc3MjMsMSBMNy42NjAyMjI3NywxIEM3LjcwMTU0MTQ5LDEgNy43NDExMzc2NCwxLjAwNzM1NTg4IDcuNzc3NzY2NTgsMS4wMjA5MDQyOSBDOS4wNjQ1MzgyOCwxLjE0NDU0MDA0IDEwLjE3MzM4ODQsMS44NTM4NTI5MSAxMC44MjIyOTQ5LDIuODcyNTA0MzggQzEwLjc5OTE5NTMsMi44NDQ4NDgwNiAxMC44NDQ0OTkxLDIuOTQ5MTc0NzYgMTAuOTA0MjgyNCwzLjAwOTEwNjgzIFoiLz4KICAgIDxwYXRoIGZpbGw9IiMwMDAwMDAiIGZpbGwtb3BhY2l0eT0iLjMxIiBkPSJNOC44NTcxNDI4NiwzLjU3MTQyODU3IEw2LjcxNDI4NTcxLDYuNTcxNDI4NTcgTDkuMjg1NzE0MjksNS4yODU3MTQyOSBDOS4yODU3MTQyOSw1LjI4NTcxNDI5IDkuNzE0Mjg1NzEsNC44NTcxNDI4NiA5LjI4NTcxNDI5LDQuNDI4NTcxNDMgQzkuMjg1NzE0MjksNCA4Ljg1NzE0Mjg2LDMuNTcxNDI4NTcgOC44NTcxNDI4NiwzLjU3MTQyODU3IFoiLz4KICAgIDxwYXRoIGZpbGw9IiNGQkIwNDAiIGQ9Ik0yLjg0Njc0NjAzLDEyLjk5NTg0OTUgQzMuMjY0OTIwNjIsMTIuOTk1ODQ5NSAzLjE4NTkzMDM0LDEyLjk0NjM2NjkgMy4zMTYxMTYzOCwxMi44NzM5MDU0IEMzLjYxODE3NTg3LDEyLjcwNTc3OTMgNS42ODk0NDA5OSw4LjcxMjc4NDU5IDcuNzE3NTU0NzYsNi44MjEzNjYwMiBDOS43NDU2Njg1Miw0LjkyOTk0NzQ2IDEwLjAwNDU3NjcsNS41NjA0MjAzMiA4Ljg4NDc5ODk1LDMuNTAyOTc3MjMgQzguODg0Nzk4OTUsMy41MDI5NzcyMyA5Ljc0NzgyNjA5LDUuMTQyMjA2NjUgOS4wMTQyNTMwMiw1LjI2ODMwMTIzIEM4LjQzODE4MjQxLDUuMzY3MDc1MzEgNy4xMTk5MDg0Nyw0LjEyMjk0MjIxIDcuNjExODMzOTMsMy4wMDQ5MDM2OCBDOC4wOTA4MTM5OSwxLjkxNDE4NTY0IDEwLjAxOTY3OTYsMi4xMjAxNDAxMSAxMC45MDY0NCwzLjAwOTEwNjgzIEMxMC44NzgzOTE2LDIuOTYyODcyMTUgMTAuODUwMzQzMiwyLjkxNjYzNzQ4IDEwLjgyMjI5NDksMi44NzI1MDQzOCBDMTAuMzA0NDc4NiwyLjI1MjUzOTQgOS41MDQwMjA5MiwxLjkwMzY3Nzc2IDguNzEwMDM1OTYsMS45MDM2Nzc3NiBDNy4xOTk3Mzg0OCwxLjkwMzY3Nzc2IDYuODIwMDA2NTQsMi40MjY5NzAyMyAzLjkyMDIzNTM3LDcuNjE5OTY0OTcgQzIuMzg3Nzk5MzQsMTAuMzY1NDA2NyAyLjAxMDgzMTkzLDExLjU3MzUwNzkgMi4wMDYyOTA2OSwxMi4xNjk4MTgyIEMyLDEyLjk5NTg0OTUgMi4wMDYyOTA2OSwxMi45OTU4NDk1IDIuODQ2NzQ2MDMsMTIuOTk1ODQ5NSBaIi8%2BCiAgPC9nPgo8L3N2Zz4K)](https://github.com/rollup/rollup/wiki/jsnext:main "Rollup")   
+
+##### Help
+
+[![Inch](https://inch-ci.org/github/MarkGriffiths/meta.svg?branch=master&style=shields)](https://inch-ci.org/github/MarkGriffiths/meta "Inch") [![Gitter](https://img.shields.io/gitter/room/MarkGriffiths/help.svg?style=flat)](https://gitter.im/MarkGriffiths/help?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge "Gitter")   
+
+## Usage
+
+#### Installation
+
+```sh
+npm install --save @thebespokepixel/meta
 ```
 
-###[API Documentation][1]
+#### Setup
+
+Require (or import) the module…
+
+ES2015
+
+    import meta from '@thebespokepixel/meta'
+    const metadata = meta(__dirname)
+    // Start searching from inside this scripts module
+
+CommonJS
+
+    const metadata = require('@thebespokepixel/meta')('..')
+    // Start searching from the cwd's parent.
+
+## Documentation
+
+Full documentation can be found at [https://markgriffiths.github.io/meta/][1]
 
 [1]: https://markgriffiths.github.io/meta/
-
-[gitter-badge]: https://img.shields.io/gitter/room/MarkGriffiths/help.svg?style=flat
-
-[project-badge]: http://img.shields.io/badge/status-beta-blue.svg?style=flat
-
-[build-badge]: http://img.shields.io/travis/MarkGriffiths/meta.svg?branch=master&style=flat
-
-[david-badge]: http://img.shields.io/david/MarkGriffiths/meta.svg?branch=master&style=flat
-
-[david-dev-badge]: http://img.shields.io/david/dev/MarkGriffiths/meta.svg?branch=master&style=flat
-
-[npm-badge]: https://img.shields.io/npm/v/@thebespokepixel/meta.svg?style=flat&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU%2BbnBtPC90aXRsZT48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGZpbGwtb3BhY2l0eT0iLjMiIGZpbGw9IiMwMDAiIHg9IjIiIHk9IjExIiB3aWR0aD0iMTAiIGhlaWdodD0iMiIgcng9IjEiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMiAyaDEwdjEwSDJ6Ii8%2BPHBhdGggZmlsbD0iI0MxMjEyNyIgZD0iTTMgMTFoNFY1aDJ2NmgyVjNIM3oiLz48L2c%2BPC9zdmc%2B
-
-[es-badge]: https://img.shields.io/badge/es2015-jsnext%3Amain_%E2%9C%94-64CA39.svg?style=flat&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjEwMCAxMDAgODAwIDgwMCI%2BPHN0eWxlPi5zdDB7ZmlsbDp1cmwoI1hNTElEXzRfKX0uc3Qxe2ZpbGw6dXJsKCNYTUxJRF81Xyl9LnN0MntmaWxsOnVybCgjWE1MSURfOF8pfS5zdDN7ZmlsbDp1cmwoI1hNTElEXzlfKX0uc3Q0e2ZpbGw6dXJsKCNYTUxJRF8xMV8pfS5zdDV7b3BhY2l0eTouMztmaWxsOnVybCgjWE1MSURfMTZfKX08L3N0eWxlPjxnIGlkPSJYTUxJRF8xNF8iPjxsaW5lYXJHcmFkaWVudCBpZD0iWE1MSURfNF8iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iNDQ0LjQ2OSIgeTE9IjUyNi4wNTEiIHgyPSI1OTguNDY5IiB5Mj0iNTYyLjA1MSI%2BPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjRkY2NTMzIi8%2BPHN0b3Agb2Zmc2V0PSIuMTU3IiBzdG9wLWNvbG9yPSIjRkY1NjMzIi8%2BPHN0b3Agb2Zmc2V0PSIuNDM0IiBzdG9wLWNvbG9yPSIjRkY0MzMzIi8%2BPHN0b3Agb2Zmc2V0PSIuNzE0IiBzdG9wLWNvbG9yPSIjRkYzNzMzIi8%2BPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRjMzIi8%2BPC9saW5lYXJHcmFkaWVudD48cGF0aCBpZD0iWE1MSURfMTVfIiBjbGFzcz0ic3QwIiBkPSJNNzIxIDQxMGMwLTMzLjYtOC44LTY1LjEtMjQuMy05Mi40LTQxLjEtNDIuMy0xMzAuNS01Mi4xLTE1Mi43LS4yLTIyLjggNTMuMiAzOC4zIDExMi40IDY1IDEwNy43IDM0LTYtNi04NC02LTg0IDUyIDk4IDQwIDY4LTU0IDE1OFMzNTkgNzc5IDM0NSA3ODdjLS42LjQtMS4yLjctMS45IDFoMzY4LjdjNi41IDAgMTAuNy02LjkgNy44LTEyLjdsLTk2LjQtMTkwLjhjLTIuMS00LjEtLjYtOS4yIDMuNC0xMS41QzY4MyA1NDAuNiA3MjEgNDc5LjggNzIxIDQxMHoiLz48L2c%2BPGcgaWQ9IlhNTElEXzJfIj48bGluZWFyR3JhZGllbnQgaWQ9IlhNTElEXzVfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjQyMC4zODIiIHkxPSI0NzUuMDAyIiB4Mj0iNjk2LjM4MyIgeTI9IjY4OS4wMDIiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI0JGMzMzOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0YzMyIvPjwvbGluZWFyR3JhZGllbnQ%2BPHBhdGggaWQ9IlhNTElEXzEwXyIgY2xhc3M9InN0MSIgZD0iTTcyMSA0MTBjMC0zMy42LTguOC02NS4xLTI0LjMtOTIuNC00MS4xLTQyLjMtMTMwLjUtNTIuMS0xNTIuNy0uMi0yMi44IDUzLjIgMzguMyAxMTIuNCA2NSAxMDcuNyAzNC02LTYtODQtNi04NCA1MiA5OCA0MCA2OC01NCAxNThTMzU5IDc3OSAzNDUgNzg3Yy0uNi40LTEuMi43LTEuOSAxaDM2OC43YzYuNSAwIDEwLjctNi45IDcuOC0xMi43bC05Ni40LTE5MC44Yy0yLjEtNC4xLS42LTkuMiAzLjQtMTEuNUM2ODMgNTQwLjYgNzIxIDQ3OS44IDcyMSA0MTB6Ii8%2BPC9nPjxsaW5lYXJHcmFkaWVudCBpZD0iWE1MSURfOF8iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iNDI5LjM4NiIgeTE9IjUxNy4xNTYiIHgyPSI0NjkuMzg2IiB5Mj0iNTU5LjE1NiI%2BPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjRkY2NTMzIi8%2BPHN0b3Agb2Zmc2V0PSIuMTU3IiBzdG9wLWNvbG9yPSIjRkY1NjMzIi8%2BPHN0b3Agb2Zmc2V0PSIuNDM0IiBzdG9wLWNvbG9yPSIjRkY0MzMzIi8%2BPHN0b3Agb2Zmc2V0PSIuNzE0IiBzdG9wLWNvbG9yPSIjRkYzNzMzIi8%2BPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRjMzIi8%2BPC9saW5lYXJHcmFkaWVudD48cGF0aCBpZD0iWE1MSURfM18iIGNsYXNzPSJzdDIiIGQ9Ik0zNDUgNzg3YzE0LTggMTEwLTE5OCAyMDQtMjg4czEwNi02MCA1NC0xNThjMCAwLTE5OSAyNzktMjcxIDQxNyIvPjxnIGlkPSJYTUxJRF83XyI%2BPGxpbmVhckdyYWRpZW50IGlkPSJYTUxJRF85XyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSI1MDIuMTExIiB5MT0iNTg5LjQ1NyIgeDI9IjQ5MC4xMTEiIHkyPSI0MTcuNDU3Ij48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNGRjY1MzMiLz48c3RvcCBvZmZzZXQ9Ii4xNTciIHN0b3AtY29sb3I9IiNGRjU2MzMiLz48c3RvcCBvZmZzZXQ9Ii40MzQiIHN0b3AtY29sb3I9IiNGRjQzMzMiLz48c3RvcCBvZmZzZXQ9Ii43MTQiIHN0b3AtY29sb3I9IiNGRjM3MzMiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGMzMiLz48L2xpbmVhckdyYWRpZW50PjxwYXRoIGlkPSJYTUxJRF8xMl8iIGNsYXNzPSJzdDMiIGQ9Ik0zNzMgNTM3YzEzNC40LTI0Ny4xIDE1Mi0yNzIgMjIyLTI3MiAzNi44IDAgNzMuOSAxNi42IDk3LjkgNDYuMS0zMi43LTUyLjctOTAuNi04OC0xNTYuOS04OUgzMDcuN2MtNC44IDAtOC43IDMuOS04LjcgOC43VjY5MWMxMy42LTM1LjEgMzYuNy04NS4zIDc0LTE1NHoiLz48L2c%2BPGxpbmVhckdyYWRpZW50IGlkPSJYTUxJRF8xMV8iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iNDUwLjEyNSIgeTE9IjUxNC4yMDkiIHgyPSI1MDYuOTQzIiB5Mj0iNTUyLjg0NiI%2BPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjRkJCMDQwIi8%2BPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRkI4ODQwIi8%2BPC9saW5lYXJHcmFkaWVudD48cGF0aCBpZD0iWE1MSURfNl8iIGNsYXNzPSJzdDQiIGQ9Ik01NDkgNDk5Yy05NCA5MC0xOTAgMjgwLTIwNCAyODhzLTM3LjUgOS01MC01Yy0xMy4zLTE0LjktMzQtMzkgNzgtMjQ1IDEzNC40LTI0Ny4xIDE1Mi0yNzIgMjIyLTI3MiAzNi44IDAgNzMuOSAxNi42IDk3LjkgNDYuMSAxLjMgMi4xIDIuNiA0LjMgMy45IDYuNS00MS4xLTQyLjMtMTMwLjUtNTIuMS0xNTIuNy0uMi0yMi44IDUzLjIgMzguMyAxMTIuNCA2NSAxMDcuNyAzNC02LTYtODQtNi04NEM2NTUgNDM5IDY0MyA0MDkgNTQ5IDQ5OXoiLz48bGluZWFyR3JhZGllbnQgaWQ9IlhNTElEXzE2XyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSI1MDguMzMzIiB5MT0iMjk1Ljc1OCIgeDI9IjQ1MC4zMzMiIHkyPSI5MzMuNzU4Ij48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNGRkYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGRkYiIHN0b3Atb3BhY2l0eT0iMCIvPjwvbGluZWFyR3JhZGllbnQ%2BPHBhdGggaWQ9IlhNTElEXzEzXyIgY2xhc3M9InN0NSIgZD0iTTM4NCA1NDhjMTM0LjQtMjQ3LjEgMTUyLTI3MiAyMjItMjcyIDMwLjMgMCA2MC44IDExLjMgODQgMzEuNy0yNC0yNy40LTU5LjYtNDIuNy05NS00Mi43LTcwIDAtODcuNiAyNC45LTIyMiAyNzItMTEyIDIwNi05MS4zIDIzMC4xLTc4IDI0NSAxLjkgMi4xIDQuMSAzLjkgNi40IDUuNC0xMS43LTE3LTE2LjktNTYuNSA4Mi42LTIzOS40eiIvPjwvc3ZnPg%3D%3D
-
-[snyk-badge]: https://snyk.io/test/github/MarkGriffiths/meta/badge.svg?style=flat
-[inch-badge]: http://inch-ci.org/github/MarkGriffiths/meta.svg?branch=master&style=shields
-[code-climate-badge]: https://codeclimate.com/github/MarkGriffiths/meta/badges/gpa.svg
-[coverage-badge]: https://codeclimate.com/github/MarkGriffiths/meta/badges/coverage.svg
-
-[travis]: https://travis-ci.org/MarkGriffiths/meta
-[david]: https://david-dm.org/MarkGriffiths/meta/master
-[david-dev]: https://david-dm.org/MarkGriffiths/meta/master#info=devDependencies
-[npm]: https://www.npmjs.com/package/@thebespokepixel/meta
-[snyk]: https://snyk.io/test/github/markgriffiths/meta
-[code-climate]: https://codeclimate.com/github/MarkGriffiths/meta
-[coverage]: https://codeclimate.com/coverage/github/MarkGriffiths/meta
-[xo]: https://github.com/sindresorhus/xo
-[inch]: http://inch-ci.org/github/MarkGriffiths/meta
-[es]: https://github.com/rollup/rollup/wiki/jsnext:main
-[gitter]: https://gitter.im/MarkGriffiths/help?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
-

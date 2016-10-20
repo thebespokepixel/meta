@@ -1,9 +1,6 @@
 toc:
-  - name: "Installation"
-    description: |
-      ```sh
-        npm install --save @thebespokepixel/meta
-      ```
+  - name: "Usage"
+    example: src/docs/example.js
   - name: "API"
     description: |
       Look up the file system hierarchy, starting from the current working
