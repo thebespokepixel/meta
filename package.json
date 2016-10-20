@@ -1,6 +1,6 @@
 {
   "name": "@thebespokepixel/meta",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Extract package metadata with consistent presentation",
   "main": "index.js",
   "scripts": {
@@ -71,11 +71,14 @@
       "status": {
         "text": "beta",
         "color": "blue"
+      },
+      "aux1": {
+        "title": "github",
+        "text": "source",
+        "color": "4E73B6",
+        "link": "https://github.com/MarkGriffiths/meta"
       }
     },
-    "test-1": [
-      "status"
-    ],
     "readme": {
       "Status": [
         [
@@ -101,7 +104,7 @@
     },
     "docs": [
       [
-        "status",
+        "aux1",
         "travis"
       ],
       [
