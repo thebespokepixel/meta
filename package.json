@@ -40,7 +40,7 @@
     "@thebespokepixel/cordial": "^0.17.9",
     "ava": "^0.16.0",
     "codeclimate-test-reporter": "^0.4.0",
-    "documentation": "^4.0.0-beta10",
+    "documentation": "^4.0.0-beta11",
     "documentation-theme-bespoke": "^0.2.3",
     "greenkeeper-postpublish": "^1.0.1",
     "gulp": "github:gulpjs/gulp#4.0",
@@ -112,7 +112,7 @@
       ]
     ]
   },
-  "buildNumber": 57,
+  "buildNumber": 0,
   "engines": {
     "node": ">=4.0 <8.0"
   },
