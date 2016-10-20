@@ -23,7 +23,7 @@ gulp.task('docs', cordial.shell({
 
 // ReadMe
 gulp.task('readme', cordial.shell({
-	source: 'compile-readme -u src/docs/example.js src/docs/readme.md > readme.md'
+	source: 'npm run readme'
 }).job())
 
 // Tests
@@ -32,9 +32,9 @@ gulp.task('xo', cordial.test().xo(['src/*.js']))
 gulp.task('test', gulp.parallel('xo', 'ava'))
 
 // Hooks
-gulp.task('start-release', gulp.series('reset', 'clean', gulp.parallel('docs', 'master'), 'readme'))
+gulp.task('start-release', gulp.series('reset', 'clean', 'master', 'readme'))
 gulp.task('post-flow-release-start', gulp.series('start-release', 'version-release', 'docs', 'commit'))
 
 // Default
-gulp.task('default', gulp.series('bump', 'clean', gulp.parallel('docs', 'bundle'), 'readme'))
+gulp.task('default', gulp.series('bump', 'clean', gulp.parallel('docs', 'bundle', 'readme')))
 
