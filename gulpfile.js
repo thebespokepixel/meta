@@ -32,8 +32,8 @@ gulp.task('xo', cordial.test().xo(['src/*.js']))
 gulp.task('test', gulp.parallel('xo', 'ava'))
 
 // Hooks
-gulp.task('start-release', gulp.series('reset', 'clean', 'master', 'readme'))
-gulp.task('post-flow-release-start', gulp.series('start-release', 'version-release', 'docs', 'commit'))
+gulp.task('start-release', gulp.series('reset', 'clean', 'master'))
+gulp.task('post-flow-release-start', gulp.series('start-release', 'version-release', 'docs', 'readme', 'commit'))
 
 // Default
 gulp.task('default', gulp.series('bump', 'clean', gulp.parallel('docs', 'bundle'), 'readme'))
