@@ -71,11 +71,14 @@
       "status": {
         "text": "beta",
         "color": "blue"
+      },
+      "aux1": {
+        "title": "github",
+        "text": "source",
+        "color": "4E73B6",
+        "link": "https://github.com/MarkGriffiths/meta"
       }
     },
-    "test-1": [
-      "status"
-    ],
     "readme": {
       "Status": [
         [
@@ -101,7 +104,7 @@
     },
     "docs": [
       [
-        "status",
+        "aux1",
         "travis"
       ],
       [
@@ -113,7 +116,7 @@
       ]
     ]
   },
-  "buildNumber": 0,
+  "buildNumber": 2,
   "engines": {
     "node": ">=4.0 <8.0"
   },
