@@ -37,11 +37,11 @@
   },
   "homepage": "https://github.com/MarkGriffiths/meta#readme",
   "devDependencies": {
-    "@thebespokepixel/cordial": "^0.16.4",
+    "@thebespokepixel/cordial": "^0.17.9",
     "ava": "^0.16.0",
     "codeclimate-test-reporter": "^0.4.0",
-    "documentation": "^4.0.0-beta10",
-    "documentation-theme-bespoke": "^0.2.0",
+    "documentation": "^4.0.0-beta11",
+    "documentation-theme-bespoke": "^0.2.3",
     "greenkeeper-postpublish": "^1.0.1",
     "gulp": "github:gulpjs/gulp#4.0",
     "nyc": "^8.3.0",
@@ -61,9 +61,60 @@
   "dependencies": {
     "read-pkg-up": "^2.0.0"
   },
-  "buildNumber": 1,
+  "badges": {
+    "github": "MarkGriffiths",
+    "npm": "thebespokepixel",
+    "name": "meta",
+    "style": "flat",
+    "providers": {
+      "status": {
+        "text": "beta",
+        "color": "blue"
+      }
+    },
+    "test-1": [
+      "status"
+    ],
+    "readme": {
+      "Status": [
+        [
+          "status",
+          "npm",
+          "travis",
+          "david"
+        ],
+        [
+          "code-climate",
+          "code-climate-coverage",
+          "snyk"
+        ]
+      ],
+      "Developer": [
+        "david-dev",
+        "rollup"
+      ],
+      "Help": [
+        "inch",
+        "gitter"
+      ]
+    },
+    "docs": [
+      [
+        "status",
+        "travis"
+      ],
+      [
+        "code-climate",
+        "code-climate-coverage"
+      ],
+      [
+        "david"
+      ]
+    ]
+  },
+  "buildNumber": 0,
   "engines": {
-    "node": ">=4.0 <7.0"
+    "node": ">=4.0 <8.0"
   },
   "jsnext:main": "lib/index-es.js"
 }

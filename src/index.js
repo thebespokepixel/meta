@@ -13,13 +13,7 @@ import readPkg from 'read-pkg-up'
  * the current working directory by default.
  * @function meta
  * @param  {String} cwd The directory to start searching for a package.json file.
- * @return {metadata}     The map of reduced package metadata.
- * @example <caption>ES2015</caption>
- * import meta from '@thebespokepixel/meta'
- * const metadata = meta('..')
- *
- * @example <caption>CommonJS</caption>
- * const metadata = require('@thebespokepixel/meta')('..')
+ * @return {metadata}   The map of reduced package metadata.
  */
 export default function (cwd = '.') {
 	const pkg = readPkg.sync({cwd}).pkg

@@ -21,13 +21,20 @@ gulp.task('docs', cordial.shell({
 	source: 'npm run doc-build'
 }).job())
 
+// ReadMe
+gulp.task('readme', cordial.shell({
+	source: 'compile-readme -u src/docs/example.js src/docs/readme.md > readme.md'
+}).job())
+
 // Tests
 gulp.task('ava', cordial.test().ava(['test/*.js']))
-gulp.task('xo', cordial.test().xo(['src/lib/*.js']))
+gulp.task('xo', cordial.test().xo(['src/*.js']))
 gulp.task('test', gulp.parallel('xo', 'ava'))
 
 // Hooks
-gulp.task('start-release', gulp.series('reset', 'clean', gulp.parallel('docs', 'master')))
+gulp.task('start-release', gulp.series('reset', 'clean', gulp.parallel('docs', 'master'), 'readme'))
+gulp.task('post-flow-release-start', gulp.series('start-release', 'version-release', 'docs', 'commit'))
 
 // Default
-gulp.task('default', gulp.series('bump', 'clean', gulp.parallel('docs', 'bundle')))
+gulp.task('default', gulp.series('bump', 'clean', gulp.parallel('docs', 'bundle'), 'readme'))
+

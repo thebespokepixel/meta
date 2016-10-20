@@ -1,110 +1,51 @@
-/* global window, document, location, anchors */
-
-// add anchor links to headers
-anchors.options.placement = 'left'
-anchors.add('h3').remove('.no-anchor')
-
-// Filter UI
-var tocElements = document.getElementById('toc')
-	.getElementsByTagName('li')
-
-document.getElementById('filter-input')
-	.addEventListener('keyup', function (e) {
-		var i
-		var element
-		var children
-
-		// enter key
-		if (e.keyCode === 13) {
-			// go to the first displayed item in the toc
-			for (i = 0; i < tocElements.length; i++) {
-				element = tocElements[i]
-				if (!element.classList.contains('display-none')) {
-					location.replace(element.firstChild.href)
-					return e.preventDefault()
-				}
-			}
+!(function () {
+	'use strict'
+	function e(e, n, t) {
+		e.classList.contains(t) ? (e.classList.remove(t), n.innerHTML = '▾') : (e.classList.add(t), n.innerHTML = '▸')
+	}
+	function n() {
+		const n = this.parentNode.parentNode.parentNode.getElementsByClassName('toggle-target')[0]
+		e(n, n, 'display-none')
+	}
+	function t() {
+		const n = this.parentNode.getElementsByClassName('toggle-target')[0]
+		const t = this.getElementsByClassName('icon')[0]
+		e(n, t, 'display-none')
+	}
+	function s(e) {
+		const n = document.getElementById(e)
+		n && n.offsetHeight === 0 && n.parentNode.parentNode.classList.contains('display-none') && n.parentNode.parentNode.classList.remove('display-none')
+	}
+	function a() {
+		s(this.hash.substring(1))
+	}
+	anchors.options.placement = 'left', anchors.add('h3').remove('.no-anchor')
+	const o = document.getElementById('toc').getElementsByTagName('li')
+	const i = document.getElementById('filter-input')
+	i.addEventListener('keyup', e => {
+		if (e.keyCode === 13)
+			{for (let n = 0; n < o.length; n++) {
+				const t = o[n]
+				if (!t.classList.contains('display-none')) {return location.replace(t.firstChild.href), e.preventDefault()}
+			}}
+		let s = function () {
+			return !0
 		}
-
-		var match = function () {
-			return true
-		}
-
-		var value = this.value.toLowerCase()
-
-		if (!value.match(/^\s*$/)) {
-			match = function (element) {
-				return element.firstChild.innerHTML.toLowerCase().indexOf(value) !== -1
-			}
-		}
-
-		for (i = 0; i < tocElements.length; i++) {
-			element = tocElements[i]
-			children = Array.from(element.getElementsByTagName('li'))
-			if (match(element) || children.some(match)) {
-				element.classList.remove('display-none')
-			} else {
-				element.classList.add('display-none')
-			}
+		const a = i.value.toLowerCase()
+		a.match(/^\s*$/) || (s = function (e) {
+			return e.firstChild.innerHTML.toLowerCase().indexOf(a) !== -1
+		})
+		for (let r = 0; r < o.length; r++) {
+			const l = o[r]
+			const d = Array.from(l.getElementsByTagName('li'))
+			s(l) || d.some(s) ? l.classList.remove('display-none') : l.classList.add('display-none')
 		}
 	})
-
-var toggles = document.getElementsByClassName('toggle-step-sibling')
-for (var i = 0; i < toggles.length; i++) {
-	toggles[i].addEventListener('click', toggleStepSibling)
-}
-
-function toggleStepSibling() {
-	var stepSibling = this.parentNode.parentNode.parentNode.getElementsByClassName('toggle-target')[0]
-	var klass = 'display-none'
-	if (stepSibling.classList.contains(klass)) {
-		stepSibling.classList.remove(klass)
-		stepSibling.innerHTML = '▾'
-	} else {
-		stepSibling.classList.add(klass)
-		stepSibling.innerHTML = '▸'
-	}
-}
-
-var items = document.getElementsByClassName('toggle-sibling')
-for (var j = 0; j < items.length; j++) {
-	items[j].addEventListener('click', toggleSibling)
-}
-
-function toggleSibling() {
-	var stepSibling = this.parentNode.getElementsByClassName('toggle-target')[0]
-	var icon = this.getElementsByClassName('icon')[0]
-	var klass = 'display-none'
-	if (stepSibling.classList.contains(klass)) {
-		stepSibling.classList.remove(klass)
-		icon.innerHTML = '▾'
-	} else {
-		stepSibling.classList.add(klass)
-		icon.innerHTML = '▸'
-	}
-}
-
-function showHashTarget(targetId) {
-	var hashTarget = document.getElementById(targetId)
-	// new target is hidden
-	if (hashTarget && hashTarget.offsetHeight === 0 &&
-		hashTarget.parentNode.parentNode.classList.contains('display-none')) {
-		hashTarget.parentNode.parentNode.classList.remove('display-none')
-	}
-}
-
-window.addEventListener('hashchange', function () {
-	showHashTarget(location.hash.substring(1))
-})
-
-showHashTarget(location.hash.substring(1))
-
-var toclinks = document.getElementsByClassName('pre-open')
-for (var k = 0; k < toclinks.length; k++) {
-	toclinks[k].addEventListener('mousedown', preOpen, false)
-}
-
-function preOpen() {
-	showHashTarget(this.hash.substring(1))
-}
+	for (let r = document.getElementsByClassName('toggle-step-sibling'), l = 0; l < r.length; l++) {r[l].addEventListener('click', n)}
+	for (let d = document.getElementsByClassName('toggle-sibling'), c = 0; c < d.length; c++) {d[c].addEventListener('click', t)}
+	window.addEventListener('hashchange', () => {
+		s(location.hash.substring(1))
+	}), s(location.hash.substring(1))
+	for (let g = document.getElementsByClassName('pre-open'), m = 0; m < g.length; m++) {g[m].addEventListener('mousedown', a, !1)}
+})()
 
