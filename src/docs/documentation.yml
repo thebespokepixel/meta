@@ -1,6 +1,6 @@
 toc:
   - name: "Usage"
-    example: src/docs/example.js
+    example: src/docs/example.md
   - name: "API"
     description: |
       Look up the file system hierarchy, starting from the current working

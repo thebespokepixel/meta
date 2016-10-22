@@ -15,28 +15,32 @@
 
 [![Inch](https://inch-ci.org/github/MarkGriffiths/meta.svg?branch=master&style=shields)](https://inch-ci.org/github/MarkGriffiths/meta "Inch") [![Gitter](https://img.shields.io/gitter/room/MarkGriffiths/help.svg?style=flat)](https://gitter.im/MarkGriffiths/help?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge "Gitter")   
 
+
 ## Usage
 
 #### Installation
 
-```sh
+```shell
 npm install --save @thebespokepixel/meta
 ```
 
 #### Setup
 
-Require (or import) the module…
+Import (or require) the module…
 
-ES2015
+###### ES2015
 
-    import meta from '@thebespokepixel/meta'
-    const metadata = meta(__dirname)
-    // Start searching from inside this scripts module
+```javascript
+import meta from '@thebespokepixel/meta'
+const metadata = meta(__dirname) // Start searching from inside this scripts module
+```
 
-CommonJS
+###### CommonJS
 
-    const metadata = require('@thebespokepixel/meta')('..')
-    // Start searching from the cwd's parent.
+```javascript
+const metadata = require('@thebespokepixel/meta')('..') // Start searching from the cwd's parent.
+```
+
 
 ## Documentation
 
