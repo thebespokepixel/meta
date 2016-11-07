@@ -50,3 +50,7 @@ test(`Module name/version is '${expectedVersion}'.`, t => {
 test(`Module text version is 'v${expectedVersion}'.`, t => {
 	t.is(`v${expectedVersion}`, myMeta.version(3))
 })
+
+test(`Module short version is '${pkg.version}'.`, t => {
+	t.is(`${pkg.version}`, myMeta.version(4))
+})
