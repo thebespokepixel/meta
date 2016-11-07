@@ -69,6 +69,8 @@ export default function (cwd = '.') {
 			})()
 
 			switch (style) {
+				case 4:
+					return `${pkg.version}`
 				case 3:
 					return `v${version}`
 				case 2:
