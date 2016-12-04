@@ -29,7 +29,8 @@
 				if (!t.classList.contains('display-none')) {
 					return location.replace(t.firstChild.href), e.preventDefault()
 				}
-			}}
+			}
+		}
 		let s = function () {
 			return !0
 		}
