@@ -26,7 +26,7 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - g++-4.8
-    code_climate:
-        repo_token: 21230ba3bdbb39a3c727e3108d571aab3de79a8f454f742b7adb13e4a816316a
+  code_climate:
+      repo_token: 21230ba3bdbb39a3c727e3108d571aab3de79a8f454f742b7adb13e4a816316a
 after_script:
   - "[ $TRAVIS_NODE_VERSION = stable ] && nyc report --reporter=text-lcov | codeclimate-test-reporter"
