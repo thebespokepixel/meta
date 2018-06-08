@@ -18,7 +18,7 @@
   },
   "files": [
     "index.js",
-    "lib"
+    "index.mjs"
   ],
   "keywords": [
     "metadata",
@@ -29,7 +29,7 @@
   "author": "Mark Griffiths <mark@thebespokepixel.com> (http://thebespokepixel.com/)",
   "copyright": {
     "year": "2018",
-    "owner": "Mark Griffiths @ The Bespoke Pixel"
+    "owner": "The Bespoke Pixel"
   },
   "license": "MIT",
   "bugs": {
