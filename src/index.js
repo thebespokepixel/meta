@@ -16,7 +16,7 @@ import readPkg from 'read-pkg-up'
  * @return {metadata}   The map of reduced package metadata.
  */
 export default function (cwd = '.') {
-	const pkg = readPkg.sync({cwd}).pkg
+	const {pkg} = readPkg.sync({cwd})
 
 	/**
 	 * Extract metadata for sharing inside a package.

@@ -4,7 +4,7 @@ import pkg from '../package'
 import meta from '..'
 
 const myMeta = meta()
-const expectedVersion = ((pkg.buildNumber === 0) && pkg.version) || `${pkg.version}-Δ${pkg.buildNumber}`
+const expectedVersion = pkg.version
 
 const bin = pkg.bin ? Object.keys(pkg.bin)[0] : 'none'
 

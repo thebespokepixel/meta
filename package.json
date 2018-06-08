@@ -3,13 +3,13 @@
   "version": "0.1.13",
   "description": "Extract package metadata with consistent presentation",
   "main": "index.js",
+  "module": "index.mjs",
   "scripts": {
     "test": "xo && nyc ava",
     "doc-serve": "documentation serve --watch --theme node_modules/documentation-theme-bespoke --github --config src/docs/documentation.yml --name $npm_package_name  --project-version $npm_package_version src/index.js",
     "doc-build": "documentation build --format html --output docs --theme node_modules/documentation-theme-bespoke --github --config src/docs/documentation.yml --name $npm_package_name  --project-version $npm_package_version src/index.js",
     "readme": "compile-readme -u src/docs/example.md src/docs/readme.md > readme.md",
     "coverage": "nyc ava && nyc report --reporter=lcov --report-dir test/coverage; open test/coverage/lcov-report/index.html",
-    "postpublish": "greenkeeper-postpublish",
     "clean": "gulp clean"
   },
   "repository": {
@@ -28,7 +28,7 @@
   ],
   "author": "Mark Griffiths <mark@thebespokepixel.com> (http://thebespokepixel.com/)",
   "copyright": {
-    "year": "2016",
+    "year": "2018",
     "owner": "Mark Griffiths @ The Bespoke Pixel"
   },
   "license": "MIT",
@@ -37,15 +37,18 @@
   },
   "homepage": "https://github.com/MarkGriffiths/meta#readme",
   "devDependencies": {
-    "@thebespokepixel/cordial": "^0.17.11",
-    "ava": "^0.17.0",
-    "codeclimate-test-reporter": "^0.4.0",
-    "documentation": "^4.0.0-beta15",
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.49",
+    "ava": "^0.25.0",
+    "documentation": "^8.0.0",
     "documentation-theme-bespoke": "^0.3.5",
-    "greenkeeper-postpublish": "^1.0.1",
-    "gulp": "github:gulpjs/gulp#4.0",
-    "nyc": "^10.0.0",
-    "xo": "^0.17.0"
+    "gulp": "^4.0.0",
+    "gulp-better-rollup": "^3.1.0",
+    "gulp-rename": "^1.2.3",
+    "gulp-strip-comments": "^2.5.2",
+    "nyc": "^12.0.2",
+    "rollup-plugin-babel": "^4.0.0-beta.4",
+    "xo": "^0.21.1"
   },
   "xo": {
     "semicolon": false,
@@ -58,7 +61,7 @@
     ]
   },
   "dependencies": {
-    "read-pkg-up": "^2.0.0"
+    "read-pkg-up": "^3.0.0"
   },
   "badges": {
     "github": "MarkGriffiths",
@@ -113,10 +116,5 @@
         "david"
       ]
     ]
-  },
-  "buildNumber": 0,
-  "engines": {
-    "node": ">=4.0 <9.0"
-  },
-  "jsnext:main": "lib/index-es.js"
+  }
 }
