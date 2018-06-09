@@ -27,7 +27,6 @@ before_script:
   - ./cc-test-reporter before-build
 after_script:
   - "[ $TRAVIS_NODE_VERSION = stable ]
-  && nyc report --reporter=text-lcov
-  | ./cc-test-reporter format-coverage --debug -t lcov
-  && ./cc-test-reporter upload-coverage
-  || mecho 'Coverage skipped'"
+  && nyc report --reporter=lcov --report-dir coverage
+  && ./cc-test-reporter after-build --debug -t lcov --exit-code $TRAVIS_TEST_RESULT
+  || echo 'Coverage skipped'"
