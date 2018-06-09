@@ -18,4 +18,6 @@ exclude_paths:
 - test/
 - bin/
 - scripts/
-- lib/
+- docs/
+- index.js
+- index.mjs
