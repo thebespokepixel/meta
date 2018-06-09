@@ -21,75 +21,72 @@
         type="text" />
       <div id="toc">
         <ul class="list-reset h5 py1-ul">
-          
-            
+
+
             <li><a
               href="#usage"
               class="h5 bold black caps">
               Usage
-              
+
             </a>
-            
+
             </li>
-          
-            
+
+
             <li><a
               href="#api"
               class="h5 bold black caps">
               API
-              
+
             </a>
-            
+
             </li>
-          
-            
+
+
             <li><a
               href="#meta"
               class="">
               meta
-              
+
             </a>
-            
+
             </li>
-          
-            
+
+
             <li><a
               href="#metadata"
               class=" toggle-sibling">
               metadata
               <span class="icon">▸</span>
             </a>
-            
+
             <div class="toggle-target display-none">
-              
+
               <ul class="list-reset py1-ul pl1">
                 <li class="h5"><span>Static members</span></li>
-                
+
                   <li><a
                     href="#metadata.version"
                     class="regular pre-open">
                     .version
                   </a></li>
-                
+
                 </ul>
-              
-              
-              
+
+
+
             </div>
-            
+
             </li>
-          
+
         </ul>
       </div>
       <div class="badges"><p><a href="https://github.com/MarkGriffiths/meta" title="Github"><img src="https://img.shields.io/badge/github-source-4E73B6.svg?style=flat" alt="Github"></a> <a href="https://travis-ci.org/MarkGriffiths/meta" title="Travis"><img src="https://img.shields.io/travis/MarkGriffiths/meta.svg?branch=master&#x26;style=flat" alt="Travis"></a> <br>
 </p>
- 
-<p><a href="https://codeclimate.com/github/MarkGriffiths/meta" title="Code-climate"><img src="https://codeclimate.com/github/MarkGriffiths/meta/badges/gpa.svg?style=flat" alt="Code-climate"></a> <a href="https://codeclimate.com/github/MarkGriffiths/meta/coverage" title="Coverage"><img src="https://codeclimate.com/github/MarkGriffiths/meta/badges/coverage.svg?style=flat" alt="Coverage"></a> <br>
-</p>
- 
+
 <p><a href="https://david-dm.org/MarkGriffiths/meta/master" title="David"><img src="https://img.shields.io/david/MarkGriffiths/meta.svg?branch=master&#x26;style=flat" alt="David"></a> <br>
 </p>
- 
+
 <br>
 
 </div>
@@ -101,14 +98,14 @@
       <h3 class="m0 no-anchor">@thebespokepixel/meta</h3>
     </div>
     <div class="flex-auto px2 pt1">
-      
-        
+
+
           <div class="keyline-top-not py1"><section class="py0 px2 clearfix note">
 	<h3 id="usage" class="m0">
 		Usage
 	</h3>
-	
-	
+
+
 		<h4>Installation</h4>
 <pre class='hljs'>npm install --save @thebespokepixel/meta</pre>
 <h4>Setup</h4>
@@ -119,174 +116,174 @@
 <h6>CommonJS</h6>
 <pre class='hljs'><span class="hljs-keyword">const</span> metadata = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@thebespokepixel/meta'</span>)(<span class="hljs-string">'..'</span>) <span class="hljs-comment">// Start searching from the cwd's parent.</span></pre>
 
-	
+
 </section>
 </div>
-        
-      
-        
+
+
+
           <div class="keyline-top-not py1"><section class="py0 px2 clearfix note">
 	<h3 id="api" class="m0">
 		API
 	</h3>
-	
+
 		<p>Look up the file system hierarchy, starting from the current working
 directory or provided path for a package file and return specific package
 metadata as a sanitised map.</p>
 
-	
-	
+
+
 </section>
 </div>
-        
-      
-        
+
+
+
           <section class="py2 px3 mb2 clearfix bg-white rounded minishadow">
 
-  
+
   <div class="clearfix">
     <h3 class="left m0 panel-title" id="meta">
       meta  <span>→ <a href="#metadata">metadata</a></span>
     </h3>
-    
+
       <a class="pl3 pr1 right rounded github" href="https://github.com/MarkGriffiths/meta/blob/00e81d79b0a5f01f92d065a5cb5185792c639fc3/src/index.js#L18-L85">src/index.js</a>
-    
+
   </div>
-  
+
 
   <p>Creates the metadata collection function, starting at the path provided or
 the current working directory by default.</p>
 
-  
+
   <div class="pre p1 bg-darken-1 mt0 signature">meta(cwd: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?= '.') → <a href="#metadata">metadata</a></div>
-  
-  
 
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
     <div class="py1 quiet mt1 prose-big">Parameters</div>
     <div class="prose">
-      
+
         <div class="space-bottom0">
           <div>
             <span class="code bold">cwd</span> <code class="quiet">(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?= '.')</code> The directory to start searching for a package.json file.
 
           </div>
-          
+
         </div>
-      
+
     </div>
-  
 
-  
 
-  
-    
+
+
+
+
       <div class="py1 quiet mt1 prose-big">Returns</div>
       <code><a href="#metadata">metadata</a></code>:
         The map of reduced package metadata.
 
-      
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
+
 </section>
 
-        
-      
-        
+
+
+
           <section class="py2 px3 mb2 clearfix bg-white rounded minishadow">
 
-  
+
   <div class="clearfix">
     <h3 class="left m0 panel-title" id="metadata">
-      metadata  
+      metadata
     </h3>
-    
+
       <a class="pl3 pr1 right rounded github" href="https://github.com/MarkGriffiths/meta/blob/00e81d79b0a5f01f92d065a5cb5185792c639fc3/src/index.js#L30-L82">src/index.js</a>
-    
+
   </div>
-  
+
 
   <p>Extract metadata for sharing inside a package.</p>
 
-  
-  
 
-  
-  
-  
-  
-  
 
-  
 
-  
+
+
+
+
+
+
+
+
+
     <div class="py1 quiet mt1 prose-big">Properties</div>
     <div>
-      
+
         <div class="space-bottom0">
           <span class="code bold">name</span> <code class="quiet">(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
           : The package's name
 
-          
+
         </div>
-      
+
         <div class="space-bottom0">
           <span class="code bold">bin</span> <code class="quiet">(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
           : The CLI binary we provide
 
-          
+
         </div>
-      
+
         <div class="space-bottom0">
           <span class="code bold">description</span> <code class="quiet">(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
           : The description from package.json
 
-          
+
         </div>
-      
+
         <div class="space-bottom0">
           <span class="code bold">license</span> <code class="quiet">(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
           : The package license
 
-          
+
         </div>
-      
+
         <div class="space-bottom0">
           <span class="code bold">bugs</span> <code class="quiet">(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
           : Our issues queue
 
-          
+
         </div>
-      
+
     </div>
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
     <div class="py1 quiet mt1 prose-big">Static Members</div>
     <div class="clearfix">
-  
+
     <div class='border-bottom' id='metadata.version'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
@@ -297,25 +294,25 @@ the current working directory by default.</p>
       <div class="clearfix display-none toggle-target">
         <section class="py2 px3 mb2 clearfix bg-white rounded minishadow">
 
-  
+
 
   <p>Print a package version string.</p>
 
-  
+
   <div class="pre p1 bg-darken-1 mt0 signature">version(style: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>) → <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></div>
-  
-  
 
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
     <div class="py1 quiet mt1 prose-big">Parameters</div>
     <div class="prose">
-      
+
         <div class="space-bottom0">
           <div>
             <span class="code bold">style</span> <code class="quiet">(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code> The version string format wanted:
@@ -325,49 +322,49 @@ the current working directory by default.</p>
 </code></pre>
 
           </div>
-          
+
         </div>
-      
+
     </div>
-  
 
-  
 
-  
-    
+
+
+
+
       <div class="py1 quiet mt1 prose-big">Returns</div>
       <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
         The version string.
 
-      
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
+
 </section>
 
       </div>
     </div>
-  
+
 </div>
 
-  
 
-  
 
-  
+
+
+
 </section>
 
-        
-      
+
+
     </div>
   </div>
   <script src="assets/js/anchor.min.js"></script>
