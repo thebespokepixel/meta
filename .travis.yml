@@ -26,7 +26,8 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 after_script:
-  - "[ $TRAVIS_NODE_VERSION = stable ] &&
-  ./cc-test-reporter format-coverage \"./meta/test/coverage/lcov.info\" --debug -t lcov &&
-  ./cc-test-reporter upload-coverage ||
-  echo 'Coverage skipped'"
+  - "[ $TRAVIS_NODE_VERSION = stable ]
+  && nyc report --reporter=text-lcov
+  | ./cc-test-reporter format-coverage --debug -t lcov
+  && ./cc-test-reporter upload-coverage
+  || mecho 'Coverage skipped'"
