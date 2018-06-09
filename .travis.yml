@@ -26,4 +26,4 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 after_script:
-  - ./cc-test-reporter after-build --debug -t lcov --prefix /home/travis/build/MarkGriffiths/meta/test/coverage/lcov.info --exit-code $TRAVIS_TEST_RESULT
+  - "[ $TRAVIS_NODE_VERSION = stable ] && ./cc-test-reporter after-build --debug --prefix \"/home/travis/build/MarkGriffiths/meta/test/coverage/lcov.info\" -t lcov --exit-code $TRAVIS_TEST_RESULT || echo 'Coverage skipped"
