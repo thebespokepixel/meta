@@ -20,17 +20,13 @@ notifications:
     on_start: never
 env:
   global:
-    - CXX=g++-4.8
     - CC_TEST_REPORTER_ID=21230ba3bdbb39a3c727e3108d571aab3de79a8f454f742b7adb13e4a816316a
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 after_script:
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  - "[ $TRAVIS_NODE_VERSION = stable ]
+  && nyc report --reporter=lcov
+  && ./cc-test-reporter after-build --debug -t lcov --exit-code $TRAVIS_TEST_RESULT
+  || echo 'Coverage skipped'"
