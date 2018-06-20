@@ -61,7 +61,7 @@
     ]
   },
   "dependencies": {
-    "read-pkg-up": "^3.0.0"
+    "read-pkg-up": "^4.0.0"
   },
   "badges": {
     "github": "MarkGriffiths",
