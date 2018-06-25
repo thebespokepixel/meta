@@ -1,129 +1,154 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset='utf-8' />
-  <title>@thebespokepixel/meta 0.2.0 | Documentation</title>
-  <meta name='viewport' content='width=device-width,initial-scale=1'>
-  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
-  <link href='assets/style.css' type='text/css' rel='stylesheet' />
-  <link href='assets/github.css' type='text/css' rel='stylesheet' />
-  <link href='assets/split.css' type='text/css' rel='stylesheet' />
+  <meta charset="utf-8" />
+  <title>@thebespokepixel/meta 0.2.2 | Documentation</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="assets/css/ace.min.css" rel="stylesheet">
+  <link href="assets/fonts/TypoPRO-Hack/TypoPRO-Hack.css" type="text/css" rel="stylesheet" />
+  <link href="assets/fonts/TypoPRO-FiraSans/TypoPRO-FiraSans.css" type="text/css" rel="stylesheet" />
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" />
 </head>
-<body class='documentation m0'>
-    <div class='flex'>
-      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
-        <div class='py1 px2'>
-          <h3 class='mb0 no-anchor'>@thebespokepixel/meta</h3>
-          <div class='mb1'><code>0.2.0</code></div>
-          <input
-            placeholder='Filter'
-            id='filter-input'
-            class='col12 block input'
-            type='text' />
-          <div id='toc'>
-            <ul class='list-reset h5 py1-ul'>
-              
-                
-                <li><a
-                  href='#usage'
-                  class="h5 bold black caps">
-                  Usage
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#api'
-                  class="h5 bold black caps">
-                  API
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#meta'
-                  class="">
-                  meta
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#metadata'
-                  class=" toggle-sibling">
-                  metadata
-                  <span class='icon'>▸</span>
-                </a>
-                
-                <div class='toggle-target display-none'>
-                  
-                  <ul class='list-reset py1-ul pl1'>
-                    <li class='h5'><span>Static members</span></li>
-                    
-                      <li><a
-                        href='#metadataversion'
-                        class='regular pre-open'>
-                        .version
-                      </a></li>
-                    
-                    </ul>
-                  
-                  
-                  
-                  
-                </div>
-                
-                </li>
-              
-            </ul>
-          </div>
-          <div class='mt1 h6 quiet'>
-            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
-          </div>
-        </div>
-      </div>
-      <div id='split-right' class='relative overflow-auto height-viewport-100'>
-        
+<body class="m0 documentation">
+  <div class="flex">
+    <div class="flex-column fixed top-0 bottom-0 px2 pt2 max-height-100 sidebar">
+      <h3 class="m0 no-anchor">@thebespokepixel/meta</h3>
+      <div class="mb1"><code>v0.2.2</code></div>
+      <input
+        placeholder="Filter"
+        id="filter-input"
+        class="col12 block input"
+        type="text" />
+      <div id="toc">
+        <ul class="list-reset h5 py1-ul">
           
-            <div class='keyline-top-not py2'><section class='py2 clearfix'>
+            
+            <li><a
+              href="#usage"
+              class="h5 bold black caps">
+              Usage
+              
+            </a>
+            
+            </li>
+          
+            
+            <li><a
+              href="#api"
+              class="h5 bold black caps">
+              API
+              
+            </a>
+            
+            </li>
+          
+            
+            <li><a
+              href="#meta"
+              class="">
+              meta
+              
+            </a>
+            
+            </li>
+          
+            
+            <li><a
+              href="#metadata"
+              class=" toggle-sibling">
+              metadata
+              <span class="icon">▸</span>
+            </a>
+            
+            <div class="toggle-target display-none">
+              
+              <ul class="list-reset py1-ul pl1">
+                <li class="h5"><span>Static members</span></li>
+                
+                  <li><a
+                    href="#metadata.version"
+                    class="regular pre-open">
+                    .version
+                  </a></li>
+                
+                </ul>
+              
+              
+              
+            </div>
+            
+            </li>
+          
+        </ul>
+      </div>
+      <div class="badges"><p><a href="https://github.com/MarkGriffiths/meta" title="Github"><img src="https://img.shields.io/badge/github-source-4E73B6.svg?style=flat" alt="Github"></a> <a href="https://travis-ci.org/MarkGriffiths/meta" title="Travis"><img src="https://img.shields.io/travis/MarkGriffiths/meta.svg?branch=master&#x26;style=flat" alt="Travis"></a> <br>
+</p>
+ 
+<p><a href="https://codeclimate.com/github/MarkGriffiths/meta/maintainability" title="Code-climate"><img src="https://api.codeclimate.com/v1/badges/undefined/maintainability?style=flat" alt="Code-climate"></a> <br>
+</p>
+ 
+<p><a href="https://codeclimate.com/github/MarkGriffiths/meta/test_coverage" title="Coverage"><img src="https://api.codeclimate.com/v1/badges/undefined/test_coverage?style=flat" alt="Coverage"></a> <br>
+</p>
+ 
+<p><a href="https://david-dm.org/MarkGriffiths/meta/master" title="David"><img src="https://img.shields.io/david/MarkGriffiths/meta.svg?branch=master&#x26;style=flat" alt="David"></a> <br>
+</p>
+ 
+<br>
 
-  <h2 id='usage' class='mt0'>
-    Usage
-  </h2>
+</div>
+      <div class="mt1 h6 quiet">
+        <a href="http://documentation.js.org/reading-documentation.html">Need help reading this?</a>
+      </div>
+    </div>
+    <div class="flex-column px2 sidespace">
+      <h3 class="m0 no-anchor">@thebespokepixel/meta</h3>
+    </div>
+    <div class="flex-auto px2 pt1">
+      
+        
+          <div class="keyline-top-not py1"><section class="py0 px2 clearfix note">
+	<h3 id="usage" class="m0">
+		Usage
+	</h3>
+	
+		
 
-  
-    
+	
+	
+		<h4>Installation</h4>
+<pre class='hljs'>npm install --save @thebespokepixel/meta</pre>
+<h4>Setup</h4>
+<p>Import (or require) the module…</p>
+<h6>ES2015</h6>
+<pre class='hljs'><span class="hljs-keyword">import</span> meta <span class="hljs-keyword">from</span> <span class="hljs-string">'@thebespokepixel/meta'</span>
+<span class="hljs-keyword">const</span> metadata = meta(__dirname) <span class="hljs-comment">// Start searching from inside this scripts module</span></pre>
+<h6>CommonJS</h6>
+<pre class='hljs'><span class="hljs-keyword">const</span> metadata = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@thebespokepixel/meta'</span>)(<span class="hljs-string">'..'</span>) <span class="hljs-comment">// Start searching from the cwd's parent.</span></pre>
 
-  
+	
 </section>
 </div>
-          
         
-          
-            <div class='keyline-top-not py2'><section class='py2 clearfix'>
-
-  <h2 id='api' class='mt0'>
-    API
-  </h2>
-
-  
-    <p>Look up the file system hierarchy, starting from the current working
+      
+        
+          <div class="keyline-top-not py1"><section class="py0 px2 clearfix note">
+	<h3 id="api" class="m0">
+		API
+	</h3>
+	
+		<p>Look up the file system hierarchy, starting from the current working
 directory or provided path for a package file and return specific package
 metadata as a sanitised map.</p>
 
-  
+	
+	
 </section>
 </div>
-          
+        
+      
         
           
-            <section class='p2 mb2 clearfix bg-white minishadow'>
+<section class='p2 mb2 clearfix bg-white minishadow'>
 
   
   <div class='clearfix'>
@@ -133,7 +158,7 @@ metadata as a sanitised map.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://MarkGriffiths@github.com/MarkGriffiths/meta/blob/0d8c0b42733563632d05fdb366a4003efc675591/src/index.js#L18-L85'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://MarkGriffiths@github.com/MarkGriffiths/meta/blob/6dad5942fc20bc768a716cad5b6b192417dab664/src/index.js#L18-L85'>
       <span>src/index.js</span>
       </a>
     
@@ -144,7 +169,7 @@ metadata as a sanitised map.</p>
 the current working directory by default.</p>
 
 
-  <div class='pre p1 fill-light mt0'>meta(cwd: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): <a href="#metadata">metadata</a></div>
+  <div class='pre p1 fill-light mt0'>meta(cwd: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>) → <a href="#metadata">metadata</a></div>
   
   
 
@@ -162,7 +187,7 @@ the current working directory by default.</p>
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>cwd</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
-	    The directory to start searching for a package.json file.
+      The directory to start searching for a package.json file.
 
           </div>
           
@@ -194,10 +219,11 @@ the current working directory by default.</p>
   
 </section>
 
-          
+        
+      
         
           
-            <section class='p2 mb2 clearfix bg-white minishadow'>
+<section class='p2 mb2 clearfix bg-white minishadow'>
 
   
   <div class='clearfix'>
@@ -207,7 +233,7 @@ the current working directory by default.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://MarkGriffiths@github.com/MarkGriffiths/meta/blob/0d8c0b42733563632d05fdb366a4003efc675591/src/index.js#L30-L82'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://MarkGriffiths@github.com/MarkGriffiths/meta/blob/6dad5942fc20bc768a716cad5b6b192417dab664/src/index.js#L30-L82'>
       <span>src/index.js</span>
       </a>
     
@@ -287,7 +313,7 @@ the current working directory by default.</p>
     <div class='py1 quiet mt1 prose-big'>Static Members</div>
     <div class="clearfix">
   
-    <div class='border-bottom' id='metadataversion'>
+    <div class='border-bottom' id='metadata.version'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
@@ -295,13 +321,14 @@ the current working directory by default.</p>
         </div>
       </div>
       <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
+        
+<section class='p2 mb2 clearfix bg-white minishadow'>
 
   
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://MarkGriffiths@github.com/MarkGriffiths/meta/blob/0d8c0b42733563632d05fdb366a4003efc675591/src/index.js#L63-L81'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://MarkGriffiths@github.com/MarkGriffiths/meta/blob/6dad5942fc20bc768a716cad5b6b192417dab664/src/index.js#L63-L81'>
       <span>src/index.js</span>
       </a>
     
@@ -311,7 +338,7 @@ the current working directory by default.</p>
   <p>Print a package version string.</p>
 
 
-  <div class='pre p1 fill-light mt0'>version(style: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></div>
+  <div class='pre p1 fill-light mt0'>version(style: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>) → <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></div>
   
   
 
@@ -330,7 +357,7 @@ the current working directory by default.</p>
           <div>
             <span class='code bold'>style</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
             = <code>1</code>)</code>
-	    The version string format wanted:
+      The version string format wanted:
 <pre><code>1: Simple number format: 0.1.2
 2: Long version with name: @thebespokepixel/meta v0.1.2
 3: v-prefixed version number: v0.1.2
@@ -378,12 +405,11 @@ the current working directory by default.</p>
   
 </section>
 
-          
         
-      </div>
+      
     </div>
-  <script src='assets/anchor.js'></script>
-  <script src='assets/split.js'></script>
-  <script src='assets/site.js'></script>
+  </div>
+  <script src="assets/js/anchor.min.js"></script>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>

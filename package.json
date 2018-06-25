@@ -96,7 +96,8 @@
       ],
       "Developer": [
         "david-dev",
-        "rollup"
+        "rollup",
+        "greenkeeper"
       ],
       "Help": [
         "inch",
@@ -109,7 +110,9 @@
         "travis"
       ],
       [
-        "code-climate",
+        "code-climate"
+      ],
+      [
         "code-climate-coverage"
       ],
       [

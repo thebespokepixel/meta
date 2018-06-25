@@ -1,6 +1,6 @@
 # @thebespokepixel/meta
 
-> Automatically render project badges into readme and documentation files.
+> Extract package metadata with consistent presentation.
 
 ${badges}
 
