@@ -66,6 +66,7 @@
   "badges": {
     "github": "MarkGriffiths",
     "npm": "thebespokepixel",
+    "codeclimate": "eec746851b0b0631df32",
     "name": "meta",
     "style": "flat",
     "providers": {
