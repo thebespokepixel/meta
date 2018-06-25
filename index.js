@@ -4,14 +4,12 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var readPkg = _interopDefault(require('read-pkg-up'));
 
-
 function index (cwd = '.') {
   const {
     pkg
   } = readPkg.sync({
     cwd
   });
-
   const metadata = {
     get name() {
       return pkg.name;
