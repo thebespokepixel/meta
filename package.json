@@ -39,7 +39,7 @@
     "@babel/core": "^7.0.0-beta.49",
     "@babel/preset-env": "^7.0.0-beta.49",
     "ava": "^0.25.0",
-    "documentation": "^8.0.0",
+    "documentation": "^9.0.0",
     "documentation-theme-bespoke": "^0.4.2",
     "gulp": "^4.0.0",
     "gulp-better-rollup": "^3.1.0",
