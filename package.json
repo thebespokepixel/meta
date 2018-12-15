@@ -38,7 +38,7 @@
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.49",
     "@babel/preset-env": "^7.0.0-beta.49",
-    "ava": "^0.25.0",
+    "ava": "^1.0.1",
     "documentation": "^8.0.0",
     "documentation-theme-bespoke": "^0.4.2",
     "gulp": "^4.0.0",
