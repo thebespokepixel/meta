@@ -27,7 +27,7 @@
   ],
   "author": "Mark Griffiths <mark@thebespokepixel.com> (http://thebespokepixel.com/)",
   "copyright": {
-    "year": "2018",
+    "year": "2019",
     "owner": "The Bespoke Pixel"
   },
   "license": "MIT",
@@ -36,18 +36,20 @@
   },
   "homepage": "https://github.com/MarkGriffiths/meta#readme",
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.49",
-    "@babel/preset-env": "^7.0.0-beta.49",
-    "ava": "^0.25.0",
-    "documentation": "^8.0.0",
-    "documentation-theme-bespoke": "^0.4.2",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "ava": "^1.2.1",
+    "documentation": "^9.1.1",
+    "documentation-theme-bespoke": "^0.4.4",
     "gulp": "^4.0.0",
-    "gulp-better-rollup": "^3.1.0",
-    "gulp-rename": "^1.2.3",
+    "gulp-better-rollup": "^3.4.0",
+    "gulp-rename": "^1.4.0",
     "gulp-strip-comments": "^2.5.2",
-    "nyc": "^12.0.2",
-    "rollup-plugin-babel": "^4.0.0-beta.4",
-    "xo": "^0.21.1"
+    "nyc": "^13.2.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "xo": "^0.24.0"
   },
   "xo": {
     "semicolon": false,
