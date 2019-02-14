@@ -38,6 +38,7 @@ export default function (cwd = '.') {
 			if (pkg.copyright && pkg.copyright.year) {
 				return `©${pkg.copyright.year} ${pkg.copyright.owner}`
 			}
+
 			return pkg.copyright ? pkg.copyright :
 				`©${new Date().getFullYear()} ${pkg.author.name}`
 		},
@@ -65,6 +66,7 @@ export default function (cwd = '.') {
 				if (pkg.buildNumber > 0) {
 					return `${pkg.version}-Δ${pkg.buildNumber}`
 				}
+
 				return `${pkg.version}`
 			})()
 

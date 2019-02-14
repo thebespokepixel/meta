@@ -1,9 +1,11 @@
 const gulp = require('gulp')
 const rename = require('gulp-rename')
 const rollup = require('gulp-better-rollup')
+const resolve = require('rollup-plugin-node-resolve')
+const commonjs = require('rollup-plugin-commonjs')
 const babel = require('rollup-plugin-babel')
 
-const external = ['read-pkg-up']
+const external = id => !id.startsWith('.') && !id.startsWith('/') && !id.startsWith('\0')
 
 const babelConfig = {
 	presets: [
@@ -22,7 +24,7 @@ gulp.task('cjs', () =>
 	gulp.src('src/index.js')
 		.pipe(rollup({
 			external,
-			plugins: [babel(babelConfig)]
+			plugins: [resolve(), commonjs(), babel(babelConfig)]
 		}, {
 			format: 'cjs'
 		}))
@@ -33,7 +35,7 @@ gulp.task('es6', () =>
 	gulp.src('src/index.js')
 		.pipe(rollup({
 			external,
-			plugins: [babel(babelConfig)]
+			plugins: [resolve(), commonjs(), babel(babelConfig)]
 		}, {
 			format: 'es'
 		}))
