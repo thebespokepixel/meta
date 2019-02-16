@@ -1,6 +1,6 @@
 {
   "name": "@thebespokepixel/meta",
-  "version": "0.2.5",
+  "version": "1.0.0",
   "description": "Extract package metadata with consistent presentation",
   "main": "index.js",
   "module": "index.mjs",
@@ -73,10 +73,6 @@
     "name": "meta",
     "style": "flat",
     "providers": {
-      "status": {
-        "text": "beta",
-        "color": "blue"
-      },
       "aux1": {
         "title": "github",
         "text": "source",
@@ -87,7 +83,6 @@
     "readme": {
       "Status": [
         [
-          "status",
           "npm",
           "travis",
           "david"
