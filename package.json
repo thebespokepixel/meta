@@ -1,6 +1,6 @@
 {
   "name": "@thebespokepixel/meta",
-  "version": "0.2.5",
+  "version": "1.0.0",
   "description": "Extract package metadata with consistent presentation",
   "main": "index.js",
   "module": "index.mjs",
@@ -36,17 +36,17 @@
   },
   "homepage": "https://github.com/MarkGriffiths/meta#readme",
   "devDependencies": {
-    "@babel/core": "^7.2.2",
+    "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.3.1",
     "acorn": "^6.1.0",
     "ava": "^1.2.1",
     "documentation": "^9.1.1",
-    "documentation-theme-bespoke": "^0.4.8",
+    "documentation-theme-bespoke": "^0.4.10",
     "gulp": "^4.0.0",
     "gulp-better-rollup": "^3.4.0",
     "gulp-rename": "^1.4.0",
     "gulp-strip-comments": "^2.5.2",
-    "nyc": "^13.2.0",
+    "nyc": "^13.3.0",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-resolve": "^4.0.0",
@@ -73,10 +73,6 @@
     "name": "meta",
     "style": "flat",
     "providers": {
-      "status": {
-        "text": "beta",
-        "color": "blue"
-      },
       "aux1": {
         "title": "github",
         "text": "source",
@@ -87,7 +83,6 @@
     "readme": {
       "Status": [
         [
-          "status",
           "npm",
           "travis",
           "david"
