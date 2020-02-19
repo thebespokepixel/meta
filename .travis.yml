@@ -1,33 +1,35 @@
+--
 branches:
   only:
-  - master
-  - develop
-  - "/^greenkeeper/.*$/"
-  - "/^feature/.*$/"
+    - master
+    - develop
+    - /^greenkeeper/.*$/
+    - /^feature/.*$/
 language: node_js
 node_js:
-- stable
-- 11
-- 10
-- 9
-- 8
+  - stable
+  - 12
+  - 11
+  - 10
 env:
   global:
-  - CC_TEST_REPORTER_ID=b62b383f834fc3519bc3f7655c3307de6056aa18487302c1a89bdde5b0653557
+    - CC_TEST_REPORTER_ID=b62b383f834fc3519bc3f7655c3307de6056aa18487302c1a89bdde5b0653557
 before_install:
-- "[[ $(node -v) =~ ^v12.*$ ]] || npm install -g npm@latest"
-- npm install -g greenkeeper-lockfile
-install: npm install
+  - npm i -g npm
+  - npm install -g greenkeeper-lockfile
+install: npm ci --no-optional
 before_script:
-- greenkeeper-lockfile-update
-- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
-  > ./cc-test-reporter
-- chmod +x ./cc-test-reporter
-- "./cc-test-reporter before-build"
+  - greenkeeper-lockfile-update
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 after_script:
-- greenkeeper-lockfile-upload
-- "[ $TRAVIS_NODE_VERSION = stable ] && nyc report --reporter=lcov && ./cc-test-reporter
-  after-build --debug -t lcov --exit-code $TRAVIS_TEST_RESULT || echo 'Coverage skipped'"
+  - greenkeeper-lockfile-upload
+  - "[ $TRAVIS_NODE_VERSION = stable ] && nyc report --reporter=lcov && ./cc-test-reporter
+    after-build --debug -t lcov --exit-code $TRAVIS_TEST_RESULT || echo 'Coverage skipped'"
 notifications:
   slack:
     secure: LWlz6/T42NjLdBlpDC2g4LflQBoyiQk/vD5IeIUmAlAneHRZSDvp6yRFrK4FiZeiUsaLsyyqjki7yZhOJsdynMeLK//DOaIif6+lK+hy8HNm4rEVOpk5mjf9KrVaaCrZa5YCM8cY49wUfgtvvSKKgJiq4+QHguyYabfFTXkLl1byiWtZg2zH7cwXBCQmHbc3ImqHjvO0/QdXwpYCfD4ellIVoOzkkuoXsw1ZLEMOysAgYrN73DOOuG+u4K/NFXtxaJxEf6uSJ4Dr0Ixsg/1FICb8LUwI82oXE+yduv8vEAHaUAfvLLmtR8D9dvXF35waBMcGjNmvh5a/sc32i+PNTMQ1f9nXFXDpr3CMhDydaMN2MhA7CflhfwpnC+HlzAjiPa4l3Ur4VZvQ9T7W0N9obSmqte4HOavPMuv7ZB3OqGU2fBnBknNKw2jMQYNS3R5hdF8j9C1SAAABsCbE1Pn1BNWoptw5ZkLVA1SDV/Q6U5IMMsuOEjDJbHiQlDjLD/yak9NYv5MWFzk9bLPjSYEx5v/j00C/BkbYz+AbxWrgIrelyyYbrR+T4MAKB9D3QOy+nlBvVePFjJSNBjv86gNAC/4PBucdc+hsgftQ0gZEFiRrd3i3Q6Vw9QzU7QIUaZ3TI6ULzIw6+KuU2WXv7f+aurYQHuBwUFXQpLzZTjMvOLI=
+cache:
+  directories:
+    - "$HOME/.npm"
