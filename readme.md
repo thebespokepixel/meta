@@ -30,7 +30,7 @@ npm install --save @thebespokepixel/meta
 
 Import (or require) the module…
 
-###### ES2015
+###### ES6
 
 ```javascript
 import meta from '@thebespokepixel/meta'
