@@ -4,7 +4,7 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var readPkg = _interopDefault(require('read-pkg-up'));
 
-function index (cwd = '.') {
+function meta(cwd = '.') {
   const pkg = readPkg.sync({
     cwd
   }).packageJson;
@@ -64,4 +64,4 @@ function index (cwd = '.') {
   return metadata;
 }
 
-module.exports = index;
+module.exports = meta;

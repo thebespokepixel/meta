@@ -1,6 +1,6 @@
 {
   "name": "@thebespokepixel/meta",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Extract package metadata with consistent presentation",
   "main": "index.js",
   "module": "index.mjs",
@@ -40,20 +40,20 @@
   "homepage": "https://github.com/thebespokepixel/meta#readme",
   "devDependencies": {
     "@ava/babel": "^1.0.1",
-    "@babel/core": "^7.8.4",
-    "@babel/preset-env": "^7.8.4",
-    "ava": "^3.3.0",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "ava": "^3.10.1",
     "documentation-theme-bespoke": "^1.1.3",
     "gulp": "^4.0.2",
     "gulp-better-rollup": "^4.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-strip-comments": "^2.5.2",
-    "nyc": "^15.0.0",
-    "rollup": "^1.31.1",
-    "rollup-plugin-babel": "^4.3.3",
+    "nyc": "^15.1.0",
+    "rollup": "^2.21.0",
+    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "xo": "^0.26.1"
+    "xo": "^0.32.1"
   },
   "xo": {
     "semicolon": false,

@@ -15,7 +15,7 @@ import readPkg from 'read-pkg-up'
  * @param  {String} cwd The directory to start searching for a package.json file.
  * @return {metadata}   The map of reduced package metadata.
  */
-export default function (cwd = '.') {
+export default function meta(cwd = '.') {
 	const pkg = readPkg.sync({cwd}).packageJson
 
 	/**
