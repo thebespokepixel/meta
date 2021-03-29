@@ -73,7 +73,7 @@
     ]
   },
   "dependencies": {
-    "read-pkg-up": "^7.0.1"
+    "read-pkg-up": "^8.0.0"
   },
   "badges": {
     "github": "thebespokepixel",
