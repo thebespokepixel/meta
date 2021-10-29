@@ -1,6 +1,6 @@
 {
   "name": "@thebespokepixel/meta",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Extract package metadata with consistent presentation",
   "main": "index.js",
   "types": "index.d.ts",
@@ -19,7 +19,8 @@
     "url": "git+https://github.com/thebespokepixel/meta.git"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "keywords": [
     "metadata",
