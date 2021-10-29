@@ -56,7 +56,7 @@
     "esnext": true,
     "ignores": [
       "index.js",
-      "index.mjs",
+      "index.d.ts",
       "lib/**",
       "docs/**",
       "test/coverage/**"
