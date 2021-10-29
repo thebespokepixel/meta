@@ -1,9 +1,9 @@
 import test from 'ava'
-
-import pkg from '../package.json'
-import meta from '..'
+import {readPackageSync} from 'read-pkg'
+import meta from '../index.js'
 
 const myMeta = meta()
+const pkg = readPackageSync()
 const expectedVersion = pkg.version
 
 const bin = pkg.bin ? Object.keys(pkg.bin)[0] : 'none'
