@@ -7,8 +7,7 @@ branches:
 language: node_js
 node_js:
   - stable
-  - 12
-  - 10
+  - "--lts"
 env:
   global:
     - CC_TEST_REPORTER_ID=b62b383f834fc3519bc3f7655c3307de6056aa18487302c1a89bdde5b0653557
@@ -20,7 +19,7 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 after_script:
-  - "[ $TRAVIS_NODE_VERSION = stable ] && nyc report --reporter=lcov && ./cc-test-reporter
+  - "[ $TRAVIS_NODE_VERSION = stable ] && c8 report --reporter=lcov --reporter=text && ./cc-test-reporter
     after-build --debug -t lcov --exit-code $TRAVIS_TEST_RESULT || echo 'Coverage skipped'"
 notifications:
   slack:

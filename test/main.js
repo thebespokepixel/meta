@@ -1,15 +1,16 @@
 import test from 'ava'
-
-import pkg from '../package.json'
-import meta from '..'
+import {readPackageSync} from 'read-pkg'
+import meta from '../index.js'
 
 const myMeta = meta()
+const pkg = readPackageSync()
 const expectedVersion = pkg.version
 
 const bin = pkg.bin ? Object.keys(pkg.bin)[0] : 'none'
 
-let copyright = pkg.copyright ? pkg.copyright :
-	`©${new Date().getFullYear()} ${pkg.author.name}`
+let copyright = pkg.copyright
+	? pkg.copyright
+	: `©${new Date().getFullYear()} ${pkg.author.name}`
 
 if (pkg.copyright && pkg.copyright.year) {
 	copyright = `©${pkg.copyright.year} ${pkg.copyright.owner}`

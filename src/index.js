@@ -6,7 +6,7 @@
  * @private
  */
 
-import readPkg from 'read-pkg-up'
+import {readPackageUpSync} from 'read-pkg-up'
 
 /**
  * Creates the metadata collection function, starting at the path provided or
@@ -16,7 +16,7 @@ import readPkg from 'read-pkg-up'
  * @return {metadata}   The map of reduced package metadata.
  */
 export default function meta(cwd = '.') {
-	const pkg = readPkg.sync({cwd}).packageJson
+	const pkg = readPackageUpSync({cwd}).packageJson
 
 	/**
 	 * Extract metadata for sharing inside a package.

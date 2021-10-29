@@ -8,11 +8,11 @@ npm install --save @thebespokepixel/meta
 
 Import (or require) the module…
 
-###### ES6
-
 ```javascript
+import {dirname} from 'node:path'
+import {fileURLToPath} from 'node:url'
 import meta from '@thebespokepixel/meta'
 
-const metadata = meta(__dirname) // Start searching from inside this scripts module
+const metadata = meta(dirname(fileURLToPath(import.meta.url))) // Start searching from inside this scripts module
 ```
 
