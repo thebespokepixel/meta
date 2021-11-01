@@ -38,7 +38,7 @@
     "url": "https://github.com/thebespokepixel/meta/issues"
   },
   "engines": {
-    "node": ">=10.0"
+    "node": ">=14.0"
   },
   "homepage": "https://github.com/thebespokepixel/meta#readme",
   "devDependencies": {
@@ -49,7 +49,7 @@
     "c8": "^7.10.0",
     "documentation-theme-bespoke": "^2.0.9",
     "read-pkg": "^7.0.0",
-    "rollup": "^2.58.3",
+    "rollup": "^2.59.0",
     "rollup-plugin-cleanup": "^3.2.1",
     "xo": "^0.46.3"
   },
@@ -61,7 +61,7 @@
       "index.d.ts",
       "lib/**",
       "docs/**",
-      "test/coverage/**"
+      "coverage/**"
     ]
   },
   "dependencies": {
