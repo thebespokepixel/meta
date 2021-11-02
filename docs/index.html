@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>@thebespokepixel/meta 3.0.3 | Documentation</title>
+  <title>@thebespokepixel/meta 3.0.4 | Documentation</title>
   <meta name='description' content='Extract package metadata with consistent presentation'>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="assets/css/ace.min.css" rel="stylesheet">
@@ -15,7 +15,7 @@
     <div id='split-left' class='overflow-auto fs0 height-viewport-100 sidebar'>
       <div class='py1 px2'>
         <h3 class="m0 no-anchor">@thebespokepixel/meta</h3>
-        <div class="mb1"><code>3.0.3</code></div>
+        <div class="mb1"><code>3.0.4</code></div>
         <input
           placeholder="Filter"
           id="filter-input"
@@ -152,7 +152,7 @@ metadata as a sanitised map.</p>
     </h3>
     
     
-      <a class='pl3 pr1 right rounded github' href='https://MarkGriffiths@github.com/thebespokepixel/meta/blob/1ff19f49ab868064ffe372a461654c413478826f/src/index.js#L18-L87'>
+      <a class='pl3 pr1 right rounded github' href='https://MarkGriffiths@github.com/thebespokepixel/meta/blob/b59976c1335a489b8ad08e4ed54be4e5808a3b0d/src/index.js#L18-L89'>
       <span>src/index.js</span>
       </a>
     
@@ -163,7 +163,7 @@ metadata as a sanitised map.</p>
 the current working directory by default.</p>
 
 
-  <div class='pre p1 bg-darken-1 mt0 rounded signature'>meta(cwd: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>) → <a href="#metadata">metadata</a></div>
+  <div class='pre p1 bg-darken-1 mt0 rounded signature'>meta(cwd: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>) → <a href="#metadata">metadata</a></div>
   
   
 
@@ -180,7 +180,7 @@ the current working directory by default.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>cwd</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+            <span class='code bold'>cwd</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
       The directory to start searching for a package.json file.
 
           </div>
@@ -227,7 +227,7 @@ the current working directory by default.</p>
     </h3>
     
     
-      <a class='pl3 pr1 right rounded github' href='https://MarkGriffiths@github.com/thebespokepixel/meta/blob/1ff19f49ab868064ffe372a461654c413478826f/src/index.js#L30-L84'>
+      <a class='pl3 pr1 right rounded github' href='https://MarkGriffiths@github.com/thebespokepixel/meta/blob/b59976c1335a489b8ad08e4ed54be4e5808a3b0d/src/index.js#L32-L86'>
       <span>src/index.js</span>
       </a>
     
@@ -260,36 +260,50 @@ the current working directory by default.</p>
     <div>
       
         <div class='space-bottom0'>
-          <span class='code bold'>name</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          <span class='code bold'>name</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
           : The package's name
 
           
         </div>
       
         <div class='space-bottom0'>
-          <span class='code bold'>bin</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          <span class='code bold'>bin</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
           : The CLI binary we provide
 
           
         </div>
       
         <div class='space-bottom0'>
-          <span class='code bold'>description</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          <span class='code bold'>description</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
           : The description from package.json
 
           
         </div>
       
         <div class='space-bottom0'>
-          <span class='code bold'>license</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          <span class='code bold'>copyright</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : Copyright info from package.json
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>license</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
           : The package license
 
           
         </div>
       
         <div class='space-bottom0'>
-          <span class='code bold'>bugs</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          <span class='code bold'>bugs</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
           : Our issues queue
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>bin</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : Declared package binaries
 
           
         </div>
@@ -321,7 +335,7 @@ the current working directory by default.</p>
   <div class='clearfix'>
     
     
-      <a class='pl3 pr1 right rounded github' href='https://MarkGriffiths@github.com/thebespokepixel/meta/blob/1ff19f49ab868064ffe372a461654c413478826f/src/index.js#L64-L83'>
+      <a class='pl3 pr1 right rounded github' href='https://MarkGriffiths@github.com/thebespokepixel/meta/blob/b59976c1335a489b8ad08e4ed54be4e5808a3b0d/src/index.js#L66-L85'>
       <span>src/index.js</span>
       </a>
     
@@ -331,7 +345,7 @@ the current working directory by default.</p>
   <p>Print a package version string.</p>
 
 
-  <div class='pre p1 bg-darken-1 mt0 rounded signature'>version(style: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>) → <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></div>
+  <div class='pre p1 bg-darken-1 mt0 rounded signature'>version(style: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>) → <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
   
   
 
@@ -348,7 +362,7 @@ the current working directory by default.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>style</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
+            <span class='code bold'>style</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
             = <code>1</code>)</code>
       The version string format wanted:
 <pre><code>1: Simple number format: 0.1.2
@@ -368,7 +382,7 @@ the current working directory by default.</p>
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
         The version string.
 
       
