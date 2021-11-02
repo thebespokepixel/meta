@@ -1,7 +1,27 @@
 import { readPackageUpSync } from 'read-pkg-up';
 
+/**
+ * @module @thebespokepixel/meta
+ * @private
+ */
+/**
+ * Creates the metadata collection function, starting at the path provided or
+ * the current working directory by default.
+ * @function meta
+ * @param  {string} cwd The directory to start searching for a package.json file.
+ * @return {metadata}   The map of reduced package metadata.
+ */
 function meta(cwd = '.') {
 	const pkg = readPackageUpSync({cwd}).packageJson;
+	/**
+	 * Extract metadata for sharing inside a package.
+	 * @const {metadata}
+	 * @property {string} name          The package's name
+	 * @property {string} bin           The CLI binary we provide
+	 * @property {string} description   The description from package.json
+	 * @property {string} license       The package license
+	 * @property {string} bugs          Our issues queue
+	 */
 	const metadata = {
 		get name() {
 			return pkg.name
@@ -25,6 +45,16 @@ function meta(cwd = '.') {
 		get bin() {
 			return pkg.bin ? Object.keys(pkg.bin)[0] : 'none'
 		},
+		/**
+		 * Print a package version string.
+		 * @param  {number} style The version string format wanted:
+		 * ```
+		 * 1: Simple number format: 0.1.2
+		 * 2: Long version with name: @thebespokepixel/meta v0.1.2
+		 * 3: v-prefixed version number: v0.1.2
+		 * ```
+		 * @return {string} The version string.
+		 */
 		version: (style = 1) => {
 			const version = (function () {
 				if (pkg.buildNumber > 0) {

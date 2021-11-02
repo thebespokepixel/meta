@@ -12,7 +12,7 @@ import {readPackageUpSync} from 'read-pkg-up'
  * Creates the metadata collection function, starting at the path provided or
  * the current working directory by default.
  * @function meta
- * @param  {String} cwd The directory to start searching for a package.json file.
+ * @param  {string} cwd The directory to start searching for a package.json file.
  * @return {metadata}   The map of reduced package metadata.
  */
 export default function meta(cwd = '.') {
@@ -21,11 +21,13 @@ export default function meta(cwd = '.') {
 	/**
 	 * Extract metadata for sharing inside a package.
 	 * @const {metadata}
-	 * @property {String} name          The package's name
-	 * @property {String} bin           The CLI binary we provide
-	 * @property {String} description   The description from package.json
-	 * @property {String} license       The package license
-	 * @property {String} bugs          Our issues queue
+	 * @property {string} name          The package's name
+	 * @property {string} bin           The CLI binary we provide
+	 * @property {string} description   The description from package.json
+	 * @property {string} copyright     Copyright info from package.json
+	 * @property {string} license       The package license
+	 * @property {string} bugs          Our issues queue
+	 * @property {string} bin           Declared package binaries
 	 */
 	const metadata = {
 		get name() {
@@ -53,13 +55,13 @@ export default function meta(cwd = '.') {
 		},
 		/**
 		 * Print a package version string.
-		 * @param  {Number} style The version string format wanted:
+		 * @param  {number} style The version string format wanted:
 		 * ```
 		 * 1: Simple number format: 0.1.2
 		 * 2: Long version with name: @thebespokepixel/meta v0.1.2
 		 * 3: v-prefixed version number: v0.1.2
 		 * ```
-		 * @return {String} The version string.
+		 * @return {string} The version string.
 		 */
 		version: (style = 1) => {
 			const version = (function () {
