@@ -19,8 +19,10 @@ function meta(cwd = '.') {
 	 * @property {string} name          The package's name
 	 * @property {string} bin           The CLI binary we provide
 	 * @property {string} description   The description from package.json
+	 * @property {string} copyright     Copyright info from package.json
 	 * @property {string} license       The package license
 	 * @property {string} bugs          Our issues queue
+	 * @property {string} bin           Declared package binaries
 	 */
 	const metadata = {
 		get name() {
