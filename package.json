@@ -1,6 +1,6 @@
 {
   "name": "@thebespokepixel/meta",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "Extract package metadata with consistent presentation",
   "main": "index.js",
   "types": "index.d.ts",
@@ -45,21 +45,19 @@
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@types/estree": "^0.0.50",
-    "ava": "^4.0.0-alpha.2",
+    "ava": "^4.0.0-rc.1",
     "c8": "^7.10.0",
-    "documentation-theme-bespoke": "^2.0.12",
+    "documentation-theme-bespoke": "^2.0.14",
     "read-pkg": "^7.0.0",
     "rollup": "^2.59.0",
     "rollup-plugin-cleanup": "^3.2.1",
-    "xo": "^0.46.3"
+    "xo": "^0.46.4"
   },
   "xo": {
     "semicolon": false,
-    "esnext": true,
     "ignores": [
       "index.js",
       "index.d.ts",
-      "lib/**",
       "docs/**",
       "coverage/**"
     ]

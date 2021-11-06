@@ -21,5 +21,4 @@ exclude_paths:
 - test/
 - docs/
 - index.js
-- index.mjs
-- gulpfile.js
+- index.d.ts
